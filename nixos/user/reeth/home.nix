@@ -3,7 +3,7 @@
 
 {
   home = {
-    username = "reeth"; # Reemplaza con tu nombre de usuario
+    username = "reeth"; #FIXME 
     homeDirectory = "/home/reeth";
     stateVersion = "24.11";
 
