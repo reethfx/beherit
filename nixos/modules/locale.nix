@@ -1,4 +1,6 @@
-  # Select internationalisation properties.
+{ config, pkgs, ... }:
+{
+# Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -12,3 +14,7 @@
     LC_TELEPHONE = "es_ES.UTF-8";
     LC_TIME = "es_ES.UTF-8";
   };
+
+    # Configure console keymap
+  console.keyMap = "es";
+}
