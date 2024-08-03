@@ -1,4 +1,4 @@
-<div align="center"><img src="https://cdn.discordapp.com/attachments/884503172578693120/1252029961519497329/StigmaOS.png?ex=66852a84&is=6683d904&hm=196392287609ea2fad6fbea32383bfe308721a3ba4698b8f04cff8cb8437aa35&" width="250" height="250"</img></div>
+<div align="center"><img src="https://cdn.discordapp.com/attachments/884503172578693120/1252029961519497329/StigmaOS.png?ex=66b00344&is=66aeb1c4&hm=e6d6ead8b56eea41b5c1c9d2db356e53234e1cd5720401d7676b3bf3cebe0bd5&" width="250" height="250"</img></div>
 
 <h1 align="center">Beherit - ベルセルク</h1>
 
