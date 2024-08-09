@@ -15,6 +15,6 @@
     LC_TIME = "es_ES.UTF-8";
   };
 
-    # Configure console keymap
+  # Configure console keymap
   console.keyMap = "es";
 }
