@@ -12,9 +12,7 @@
         enable = true;
       };
 
-      hyprland = {
-        enable = true;
-      };
+      wayland.windowManager.hyprland.enable = true;
 
     };
   };
