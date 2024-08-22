@@ -7,14 +7,14 @@
 {
   imports =
     [   # Include the results of the hardware scan.
-        ./hardware-configuration.nix
+        ./nixos/hardware-configuration.nix
 
         # Module imports
-        ./modules/networking.nix
-        ./modules/locale.nix
-        ./modules/users.nix
-        ./modules/pipewire.nix
-        ./modules/unfree.nix
+        ./nixos/modules/networking.nix
+        ./nixos/modules/locale.nix
+        ./nixos/modules/users.nix
+        ./nixos/modules/pipewire.nix
+        ./nixos/modules/unfree.nix
     ];
   
   nix.settings.experimental-features = ["nix-command" "flakes"];
