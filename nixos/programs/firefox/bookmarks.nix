@@ -1,7 +1,11 @@
 [
   {
-    name = "Luminosa";
-    url = "https://home.dobon.dev";
+    name = "GitHub";
+    url = "https://github.com";
+  }
+  {
+    name = "Twitter";
+    url = "https://twitter.com";
   }
   {
     name = "YouTube";
@@ -10,10 +14,6 @@
   {
     name = "Reddit";
     url = "https://reddit.com";
-  }
-  {
-    name = "GitHub";
-    url = "https://github.com";
   }
   {
     name = "Nix";
@@ -41,7 +41,7 @@
     url = "https://backloggd.com";
   }
   {
-    name = "Syncthing";
-    url = "https://localhost:8384";
+    name = "ChatGPT";
+    url = "https://openai.chatgpt.com";
   }
 ]
