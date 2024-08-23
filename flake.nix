@@ -19,7 +19,7 @@
         b3rsrk = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [
-            ./configuration.nix
+            ./nixos/configuration.nix
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;

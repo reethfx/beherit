@@ -18,12 +18,12 @@
     ];
   
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   programs.hyprland.enable = true; 
-
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
