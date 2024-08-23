@@ -7,18 +7,18 @@
 {
   imports =
     [   # Include the results of the hardware scan.
-        ./nixos/hardware-configuration.nix
+        ./hardware-configuration.nix
 
         # Module imports
-        ./nixos/modules/networking.nix
-        ./nixos/modules/locale.nix
-        ./nixos/modules/users.nix
-        ./nixos/modules/pipewire.nix
-        ./nixos/modules/unfree.nix
+        ./modules/networking.nix
+        ./modules/locale.nix
+        ./modules/users.nix
+        ./modules/pipewire.nix
+        ./modules/unfree.nix
     ];
   
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
