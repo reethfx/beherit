@@ -4,7 +4,6 @@
   home.username = "reeth";
   home.stateVersion = "24.11";
 
-  programs.zoxide.enable = true;
   programs.ripgrep.enable = true;
 
   programs.git = {
@@ -20,6 +19,14 @@
   };
 
   services.syncthing.enable = true;
+
+  stylix = {
+    base16Scheme = ../../dotfiles/stylix/theme.yaml;
+    autoEnable = false;
+    targets.gtk.enable = true;
+    targets.firefox.enable = true;
+    targets.firefox.profileNames = ["Kutu"];
+  };
 
   programs.btop = {
     enable = true;
