@@ -3,13 +3,18 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
+
+    ags.url = "github:Aylur/ags";
+    ags.inputs.nixpkgs.follows = "nixpkgs";
+
+    stylix.url = "github:danth/stylix";
+    stylix.inputs.nixpkgs.follows = "nixpkgs";
+
+    nur.url = "github:nix-community/NUR";
+    nur.inputs.nixpkgs.follows = "nixpkgs";
 
     home-manager.url = "github:nix-community/home-manager";
-    
-    ags.url = "github:Aylur/ags";
-
-    hyprland.url = "github:hyprwm/Hyprland";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { self, nixpkgs, home-manager, ags, hyprland, flake-utils }:
@@ -20,7 +25,7 @@
         nixosConfigurations.beherit = pkgs.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./modules/home-manager.nix
+            ./modules/home.nix
           ];
         };
       });

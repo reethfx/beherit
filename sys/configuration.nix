@@ -4,6 +4,7 @@
   imports =
     [ 
       ./hardware-configuration.nix
+      ./user.nix
     ];
 
   # Configuración básica del sistema
