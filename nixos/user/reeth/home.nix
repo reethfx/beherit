@@ -20,13 +20,13 @@
 
   services.syncthing.enable = true;
 
-  stylix = {
-    base16Scheme = ../../dotfiles/stylix/theme.yaml;
-    autoEnable = false;
-    targets.gtk.enable = true;
-    targets.firefox.enable = true;
-    targets.firefox.profileNames = ["Kutu"];
-  };
+  # stylix = {
+  #   base16Scheme = ../../dotfiles/stylix/theme.yaml;
+  #   autoEnable = false;
+  #   targets.gtk.enable = true;
+  #   targets.firefox.enable = true;
+  #   targets.firefox.profileNames = ["Kutu"];
+  # };
 
   programs.btop = {
     enable = true;
