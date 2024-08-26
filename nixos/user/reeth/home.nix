@@ -1,5 +1,11 @@
 { pkgs, config, ... }: {
-  imports = [../../programs/starship.nix ../../programs/firefox/default.nix];
+  imports = [
+    ../../programs/shell/fish.nix
+    ../../programs/shell/starship.nix
+    ../../programs/dev/rust/rust.nix
+    ../../programs/dev/dotnet/dotnet.nix
+    ../../programs/dev/nodejs/nodejs.nix
+    ];
 
   home.username = "reeth";
   home.stateVersion = "24.11";

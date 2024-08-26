@@ -30,7 +30,7 @@
           modules = [
             ./nixos/configuration.nix
             #home-manager.nixosModules.home-manager
-            {
+             homeConfigurations = {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.reeth = import ./nixos/user/reeth/home.nix;
