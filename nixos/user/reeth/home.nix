@@ -1,10 +1,6 @@
 { pkgs, config, ... }: {
   imports = [
-    ../../programs/shell/fish.nix
-    ../../programs/shell/starship.nix
-    ../../programs/dev/rust/rust.nix
-    ../../programs/dev/dotnet/dotnet.nix
-    ../../programs/dev/nodejs/nodejs.nix
+    ../../programs/default.nix
     ];
 
   home.username = "reeth";
