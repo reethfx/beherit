@@ -29,10 +29,16 @@
           inherit system;
           modules = [
             ./nixos/configuration.nix
-            #home-manager.nixosModules.home-manager
-             homeConfigurations = {
+            {
+              imports = [
+                home-manager.nixosModules.home-manager
+              ];
+
+              # Specify home-manager options here
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
+
+              # User specific configurations
               home-manager.users.reeth = import ./nixos/user/reeth/home.nix;
             }
           ];
