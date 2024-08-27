@@ -1,48 +1,32 @@
 {
-  description = "Beheirt dotfiles by reeth";
+  description = "Beherit's NixOS dotfiles";
 
   inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
+    hyprland.url = "github:hyprwm/Hyprland";
     ags.url = "github:Aylur/ags";
-    ags.inputs.nixpkgs.follows = "nixpkgs";
-
-    stylix.url = "github:danth/stylix";
-    stylix.inputs.nixpkgs.follows = "nixpkgs";
-
-    nur.url = "github:nix-community/NUR";
-    nur.inputs.nixpkgs.follows = "nixpkgs";
-
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-  
   };
 
-  outputs = { self, nixpkgs, home-manager }:
+  outputs = { self, nixpkgs, home-manager, hyprland, ags, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; };
+      pkgs = nixpkgs.legacyPackages.${system};
     in {
-      nixosConfigurations = {
-        b3rsrk = nixpkgs.lib.nixosSystem {
-          inherit system;
-          modules = [
-            ./nixos/configuration.nix
-            {
-              imports = [
-                home-manager.nixosModules.home-manager
-              ];
-
-              # Specify home-manager options here
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-
-              # User specific configurations
-              home-manager.users.reeth = import ./nixos/user/reeth/home.nix;
-            }
-          ];
-        };
+      homeConfigurations.reeth = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          ./modules/home.nix
+          hyprland.homeManagerModules.default
+          {
+            home.packages = [ ags.packages.${system}.default ];
+          }
+        ];
       };
     };
 }

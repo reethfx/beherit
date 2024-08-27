@@ -1,6 +1,11 @@
+
 { config, pkgs, ... }:
+
 {
-# Select internationalisation properties.
+  # Set your time zone.
+  time.timeZone = "Europe/Madrid";
+
+  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -15,6 +20,6 @@
     LC_TIME = "es_ES.UTF-8";
   };
 
-  # Configure console keymap
   console.keyMap = "es";
+
 }
