@@ -1,5 +1,5 @@
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, inputs ... }:
 
 {
   # Install firefox.
@@ -9,6 +9,7 @@
     enable = true;
     nvidiaPatches = true;
     xwayland.enable = true;
+    package = inputs.hyprland.packages."${pkgs.system}".hyprland;
   };
 
   environment.systemVariables = {

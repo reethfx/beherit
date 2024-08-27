@@ -24,7 +24,10 @@
           ./modules/home.nix
           hyprland.homeManagerModules.default
           {
-            home.packages = [ ags.packages.${system}.default ];
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+
+            home-manager.users.reeth = import ./home/home.nix; #FIXME change this line to your username
           }
         ];
       };
