@@ -13,23 +13,23 @@
     ags.url = "github:Aylur/ags";
   };
 
-  outputs = { self, nixpkgs, home-manager, hyprland, ags, ... }@inputs:
-    let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in {
-      homeConfigurations.reeth = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+outputs = inputs@{ nixpkgs, home-manager, ... }: {
+    nixosConfigurations = {
+      # TODO please change the hostname to your own
+      beherit = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
         modules = [
-          ./modules/home.nix
-          hyprland.homeManagerModules.default
+          ./configuration.nix
+          home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
-            home-manager.users.reeth = import ./home/home.nix; #FIXME change this line to your username
+            # TODO replace ryan with your own username
+            home-manager.users.reeth = import ./home.nix;
           }
         ];
       };
     };
+  };
 }
