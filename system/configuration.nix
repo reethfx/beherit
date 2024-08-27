@@ -9,5 +9,4 @@
     ];
 
   system.stateVersion = "24.05"; # FIXME Ensure that this is your system version.
-
 }
