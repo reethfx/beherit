@@ -1,4 +1,4 @@
-{config, lib, options : {
+{config, lib, options, ... } : {
   
   enable = true;
   systemd.enable = true;
