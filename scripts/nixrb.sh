@@ -5,6 +5,8 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+cd ../
+
 echo "Cleaning and rebuilding NixOS system..."
 
 echo "Cleaning up the system..."

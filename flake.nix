@@ -14,10 +14,7 @@
   };
 
 outputs = inputs@{ nixpkgs, home-manager, ... }: {
-    nixosConfigurations = {
-      # TODO please change the hostname to your own
-      beherit = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+    nixosConfigurations.beherit = nixpkgs.lib.nixosSystem {
         modules = [
           ./system/configuration.nix
           home-manager.nixosModules.home-manager
