@@ -8,9 +8,8 @@
 
   imports = [
     ./modules/hyprland/hyprland.nix
-    ./modules/ags.nix
-    ./modules/dunst.nix
-    ./modules/shell.nix
+    ./modules/hyprlock.nix
+    ./modules/hyprland/hyprland.nix
   ];
 
 

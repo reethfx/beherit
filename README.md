@@ -68,6 +68,12 @@ You have the flexibility to customize these configurations according to your nee
 |------------------------|------------------------------|
 | ALT + R                | Resize windows mode          |
 | ALT + M                | Move windows mode            |
+| WIN + Q                | Kill active window           |
+| WIN + SHIFT + Q        | Exit                         |
+| WIN + X                | Toggle floating mode         |
+
+
+
 
 
 You can find all other keybindings in `/home/.config/hypr/hyprland.conf` in the bind section. All system fish scripts are located at `/home/.config/fish/functions` directory.
