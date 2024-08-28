@@ -1,5 +1,5 @@
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -11,6 +11,5 @@
      ./pipewire.nix
      ./services.nix
      ./user.nix
-
     ];
 }

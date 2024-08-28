@@ -9,7 +9,6 @@
   imports = [
     ./modules/hyprland/hyprland.nix
     ./modules/hyprlock.nix
-    ./modules/hyprland/hyprland.nix
   ];
 
 

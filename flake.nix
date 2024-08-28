@@ -26,7 +26,7 @@ outputs = inputs@{ nixpkgs, home-manager, ... }: {
             home-manager.useUserPackages = true;
 
             # TODO replace reeth with your own username
-            home-manager.users.reeth = import ./home.nix;
+            home-manager.users.reeth = import ./home/home.nix;
           }
         ];
       };

@@ -1,5 +1,5 @@
 
-{ config, pkgs, lib, inputs ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
   # Install firefox.
@@ -7,15 +7,14 @@
 
   programs.hyprland = {
     enable = true;
-    nvidiaPatches = true;
     xwayland.enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
   };
 
-  environment.systemVariables = {
-    WLR_NO_HARDWARE_CURSORS = "1"; # Disable hardware cursors
-    NIXOS_OZONE_WL = "1"; # Hint electron apps to force wayland
-  };
+  # environment.systemVariables = {
+  #   WLR_NO_HARDWARE_CURSORS = "1";
+  #   NIXOS_OZONE_WL = "1";
+  # };
 
   hardware = {
     #OpenGL
