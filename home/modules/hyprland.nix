@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   wayland.windowManager.hyprland = {
@@ -27,5 +27,7 @@
     neovim
     fish
     starship
+    kitty
+    wofi
   ];
 }
