@@ -1,4 +1,6 @@
 {
+  description = "Beherit's NixOS configuration by reeth";
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
