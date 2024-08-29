@@ -1,15 +1,13 @@
-
 { config, pkgs, inputs, ... }:
 
 {
-  imports =
-    [ 
-     ./bootloader.nix
-     ./locale.nix
-     ./networking.nix
-     ./packages.nix
-     ./pipewire.nix
-     ./services.nix
-     ./user.nix
-    ];
+  imports = [
+    (import ./bootloader.nix { inherit config pkgs inputs; })
+    (import ./locale.nix { inherit config pkgs inputs; })
+    (import ./networking.nix { inherit config pkgs inputs; })
+    (import ./packages.nix { inherit config pkgs inputs; })
+    (import ./pipewire.nix { inherit config pkgs inputs; })
+    (import ./services.nix { inherit config pkgs inputs; })
+    (import ./user.nix { inherit config pkgs inputs; })
+  ];
 }

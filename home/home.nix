@@ -1,16 +1,23 @@
-{ config, pkgs,  inputs, ... }:
+{ config, pkgs, ... }:
 
 {
-   #FIXME change this block to your username
-  home.username = "reeth"; #FIXME 
-  home.homeDirectory = "/home/reeth";
-  home.stateVersion = "23.05"; #FIXME Ensure that this is your home-manager version.
+  imports = [
+    ./modules/hyprland.nix
+    ./modules/shell.nix
+    ./modules/wayland.nix
+    ./modules/hyprlock.nix
+  ];
 
-  programs.home-manager.enable = true;
+    #FIXME change this block to your username
+    home.username = "reeth"; #FIXME 
+    home.homeDirectory = "/home/reeth";
+    home.stateVersion = "23.05"; #FIXME Ensure that this is your home-manager version.
 
-  programs.git = {
-    enable = true;
-    userName = "reethfx";
-    userEmail = "reethb3rsrk@gmail.com";
-  };
+    programs.home-manager.enable = true;
+
+    programs.git = {
+      enable = true;
+      userName = "reethfx";
+      userEmail = "reethb3rsrk@gmail.com";
+    };
 }
