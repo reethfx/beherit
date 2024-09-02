@@ -21,17 +21,19 @@
       inherit system;
       config.allowUnfree = true;
     };
+
   in
   {
     nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs username system hostname; };
-      modules = [ ./system/configuration.nix
-                  home-manager.nixosModules.home-manager {
-                    home-manager.useGlobalPkgs = true;
-                    home-manager.useUserPackages = true;
-                    home-manager.users.${username} = import ./home/home.nix;
-                    home-manager.extraSpecialArgs = {inherit inputs usernam hostname; };
-                  }
+      modules = [ 
+        ./system/configuration.nix
+        home-manager.nixosModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.${username} = import ./home/home.nix;
+          home-manager.extraSpecialArgs = {inherit inputs username hostname; };
+        }
       ];
     };
   };

@@ -1,15 +1,19 @@
 { config, pkgs, inputs, ... }:
 
 let
+
   ags = inputs.ags.packages.${pkgs.system}.default;
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz";
+
 in
 {
   home.stateVersion = "24.05";
-  
-  # Configuración específica de Hyprland
-  wayland.windowManager.hyprland.enable = true;
+  home.packages = with pkgs; [
+    ags
+    vscode
+  ];
 
+  wayland.windowManager.hyprland.enable = true;
+  
    wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
     bind =
