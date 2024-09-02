@@ -8,7 +8,6 @@ in
   home.packages = with pkgs; [
     ags
     firefox
-    hyprland
   ];
 
   programs.kitty.enable = true;

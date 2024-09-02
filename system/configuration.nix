@@ -19,7 +19,10 @@
       inputs.home-manager.nixosModules.default
     ];
 
+  programs = {
+    hyprland.enable = true;
+  };
+
   system.stateVersion = "24.05"; # FIXME: Change me to the actual version
   
-
 }

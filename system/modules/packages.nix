@@ -1,4 +1,4 @@
-{  pkgs, lib, inputs, ... }:
+{  config, pkgs, lib, inputs, ... }:
 {
   environment.systemPackages = with pkgs; [
      wget
@@ -8,4 +8,5 @@
      curl
      inputs.nixpkgs.legacyPackages.${pkgs.system}.neofetch
   ];
+
 }
