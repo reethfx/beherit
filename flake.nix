@@ -10,20 +10,32 @@
     hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = { nixpkgs, ... } @ inputs: 
-  {
-  
+  outputs = { nixpkgs, home-manager, hyprland, ... } @ inputs: {
+
     nixosConfigurations.beherit = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
          ./system/configuration.nix
       ];
     };
-    
-#    homeConfigurations."reeth" = home-manager.lib.homeManagerConfiguration {
-#      inherit pkgs;
-#    
-#      modules = [ ./home/home.nix ];
-#    }; 
+
+    homeConfigurations.reeth = home-manager.lib.homeManagerConfiguration {
+      pkgs = import nixpkgs {
+        system = "x86_64-linux";  # Ajusta según tu arquitectura
+        overlays = [ (self: super: {
+          hyprland = inputs.hyprland.packages.${super.system}.hyprland;
+        }) ];
+      };
+
+      homeDirectory = "/home/reeth";
+      modules = [
+        ./home/home.nix
+        {
+          programs.hyprland = {
+            enable = true;
+          };
+        }
+      ];
+    };
   };
 }
