@@ -1,16 +1,18 @@
-{ pkgs, lib, ... }:
+{ config, pkgs, inputs, ... }:
 
+let
+  ags = inputs.ags.packages.${pkgs.system}.default;
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-23.11.tar.gz";
+in
 {
-  wayland.windowManager.hyprland = {    
-    settings = {
-     "$mod" = "SUPER";
+  home.stateVersion = "24.05";
+  
+  # Configuración específica de Hyprland
+  wayland.windowManager.hyprland.enable = true;
 
-     general = with config.colorScheme.colors; {
-       "col.active_border" = "rgba(${base0E}ff) rgba(${base09}ff) 60deg";
-       "col.inactive_border" = "rgba(${base00}ff)";
-      };
-
-      bind =
+   wayland.windowManager.hyprland.settings = {
+    "$mod" = "SUPER";
+    bind =
       [
         "$mod, F, exec, firefox"
         ", Print, exec, grimblast copy area"
@@ -25,8 +27,8 @@
               "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
             ]
           )
-          6)
+          9)
       );
-    } 
   };
+  
 }

@@ -2,17 +2,20 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{  pkgs, lib, inputs, ... }:
+{  pkgs, lib, inputs, osConfig, ... }:
 
 {
   imports = [
       ./hardware-configuration.nix
+      
       ./modules/bootloader.nix
+      ./modules/locale.nix
       ./modules/networking.nix
       ./modules/packages.nix
       ./modules/pipewire.nix
       ./modules/services.nix
       ./modules/user.nix
+
       inputs.home-manager.nixosModules.default
     ];
 

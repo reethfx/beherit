@@ -1,38 +1,37 @@
 {
-  description = "Beherit dotfiles for NixOS by reeth";
-
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-   
-    hyprland.url = "github:hyprwm/Hyprland";
-  };
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
-  outputs = { nixpkgs, home-manager, hyprland, ... } @ inputs: {
-
-    nixosConfigurations.beherit = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
-      modules = [
-         ./system/configuration.nix
-      ];
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    homeConfigurations.reeth = home-manager.lib.homeManagerConfiguration {
-      pkgs = import nixpkgs {
-        system = "x86_64-linux";
-        overlays = [ (self: super: {
-          hyprland = inputs.hyprland.packages.${super.system}.hyprland;
-        }) ];
-      };
+    hyprland.url = "github:hyprwm/Hyprland";
 
-      modules = [
-        ./home/home.nix
-        {
-        programs.kitty.enable = true; # required for the default Hyprland config
-        wayland.windowManager.hyprland.enable = true; # enable Hyprland
-        }
+    ags.url = "github:Aylur/ags";
+  };
+
+  outputs = { home-manager, nixpkgs, ... } @inputs:
+  let
+    username = "reeth";
+    hostname = "beherit";
+    system = "x86_64-linux";
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
+  in
+  {
+    nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs username system hostname; };
+      modules = [ ./system/configuration.nix
+                  home-manager.nixosModules.home-manager {
+                    home-manager.useGlobalPkgs = true;
+                    home-manager.useUserPackages = true;
+                    home-manager.users.${username} = import ./home/home.nix;
+                    home-manager.extraSpecialArgs = {inherit inputs usernam hostname; };
+                  }
       ];
     };
   };
