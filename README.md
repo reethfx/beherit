@@ -1,4 +1,4 @@
-<div align="center"><img src="./media/beheritosicon.png" width="250" height="250"</img></div>
+<div align="center"><img src="./media/beherit.png" width="250" height="250"</img></div>
 
 <h1 align="center">Beherit - ベルセルク</h1>
 
