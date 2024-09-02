@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{  pkgs, lib, inputs, osConfig, ... }:
+{  pkgs, config, lib, inputs, osConfig, ... }:
 
 {
   imports = [
@@ -19,10 +19,6 @@
       inputs.home-manager.nixosModules.default
     ];
 
-  programs = {
-    hyprland.enable = true;
-  };
-
-  system.stateVersion = "24.05"; # FIXME: Change me to the actual version
+   system.stateVersion = "24.05"; # FIXME: Change me to the actual version
   
 }

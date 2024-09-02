@@ -1,4 +1,4 @@
-{ inputs, ... }: 
+{ config, pkgs, inputs, ... }: 
 
 {
   services.openssh.enable = true;
@@ -16,7 +16,19 @@
     variant = "";
   };
 
-  
   # Enable CUPS to print documents.
   services.printing.enable = true;
+
+  
+  services.tailscale.enable = true;
+
+  programs.hyprland.enable = true;
+  
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    extraPortals = [pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk];
+    config.common.default = "*";
+  };
+    
 }

@@ -8,7 +8,7 @@
     };
 
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    
+
     ags.url = "github:Aylur/ags";
   };
 
@@ -28,6 +28,7 @@
       specialArgs = { inherit inputs username system hostname; };
       modules = [ 
         ./system/configuration.nix
+
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;

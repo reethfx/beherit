@@ -8,5 +8,4 @@
      curl
      inputs.nixpkgs.legacyPackages.${pkgs.system}.neofetch
   ];
-
 }
