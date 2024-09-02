@@ -1,17 +1,17 @@
 { config, pkgs, inputs, ... }:
 
 let
-
   ags = inputs.ags.packages.${pkgs.system}.default;
-
 in
 {
   home.stateVersion = "24.05";
   home.packages = with pkgs; [
     ags
-    vscode
+    firefox
+    hyprland
   ];
 
+  programs.kitty.enable = true;
   wayland.windowManager.hyprland.enable = true;
   
    wayland.windowManager.hyprland.settings = {
@@ -31,7 +31,7 @@ in
               "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
             ]
           )
-          9)
+          6)
       );
   };
   
