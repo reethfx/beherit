@@ -12,20 +12,10 @@
       ./modules/packages.nix
       ./modules/pipewire.nix
       ./modules/services.nix
+      ./modules/user.nix
       inputs.home-manager.nixosModules.default
     ];
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.reeth = {
-    isNormalUser = true;
-    description = "reeth";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-
-    ];
-  };
-
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.05"; # FIXME: Change me to the actual version
 
 }

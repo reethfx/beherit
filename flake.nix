@@ -21,19 +21,17 @@
 
     homeConfigurations.reeth = home-manager.lib.homeManagerConfiguration {
       pkgs = import nixpkgs {
-        system = "x86_64-linux";  # Ajusta según tu arquitectura
+        system = "x86_64-linux";
         overlays = [ (self: super: {
           hyprland = inputs.hyprland.packages.${super.system}.hyprland;
         }) ];
       };
 
-      homeDirectory = "/home/reeth";
       modules = [
         ./home/home.nix
         {
-          programs.hyprland = {
-            enable = true;
-          };
+        programs.kitty.enable = true; # required for the default Hyprland config
+        wayland.windowManager.hyprland.enable = true; # enable Hyprland
         }
       ];
     };
