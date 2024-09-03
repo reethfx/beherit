@@ -43,14 +43,14 @@
                 home.stateVersion = "24.11";
                 home.homeDirectory = "/home/reeth";
                 programs.home-manager.enable = true;
-                # wayland.windowManager.hyprland.enable = true;
+                wayland.windowManager.hyprland.enable = true;
 	            }
             ];
 
             home.packages = with pkgs; [
-              # hyprland
-              # xdg-desktop-portal-gtk
-              # xdg-desktop-portal-hyprland
+             hyprland
+              xdg-desktop-portal-gtk
+              xdg-desktop-portal-hyprland
             ];
           };
         };
