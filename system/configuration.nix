@@ -19,6 +19,12 @@
       inputs.home-manager.nixosModules.default
     ];
 
+  programs.hyprland = {
+    enable = true;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland; #Hyprland Flake input temp fix
+    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+  };
+
    system.stateVersion = "24.05"; # FIXME: Change me to the actual version
   
 }

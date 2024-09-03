@@ -7,7 +7,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    hyprland = {
+      url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    };
 
     ags.url = "github:Aylur/ags";
   };
@@ -33,7 +35,6 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.${username} = import ./home/home.nix;
-          home-manager.backupFileExtension = "backup";
           home-manager.extraSpecialArgs = {inherit inputs username hostname; };
         }
       ];

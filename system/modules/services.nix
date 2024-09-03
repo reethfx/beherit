@@ -19,11 +19,8 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  
   services.tailscale.enable = true;
 
-  programs.hyprland.enable = true;
-  
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
