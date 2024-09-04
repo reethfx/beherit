@@ -1,8 +1,8 @@
 { config, pkgs, hyprland, ags, ... }:
 
 let
-  hyprlandConfig = import ./dotnet/hyprland/default.nix { inherit pkgs hyprland; };
-  packages = import ./dotnet/packages.nix { inherit pkgs; };
+  hyprlandConfig = import ./dotfiles/hyprland/default.nix { inherit pkgs hyprland; };
+  packages = import ./dotfiles/packages.nix { inherit pkgs; };
 in
 {
   programs.home-manager.enable = true;
