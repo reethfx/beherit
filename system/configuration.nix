@@ -17,7 +17,7 @@
       ./modules/user.nix
     ];
 
-   # programs.hyprland.enable = true; # Hyprland system-wise disabling cuz of nixpkgs bug
+   programs.hyprland.enable = true; # Hyprland system-wise disabling cuz of nixpkgs bug
    
    system.stateVersion = "24.05"; # FIXME: Change me to the actual version
   
