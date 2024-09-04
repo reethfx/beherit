@@ -1,4 +1,4 @@
-{  pkgs, lib, inputs, ... }:
+{  config, pkgs, lib, ... }:
 
 {
   users.users.reeth = {
@@ -6,5 +6,4 @@
     extraGroups = [ "wheel" "networkmanager" ];
     home = "/home/reeth";
   };
-
 }

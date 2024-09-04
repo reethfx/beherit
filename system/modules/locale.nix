@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ ... }:
 
 {
   time.timeZone = "Europe/Madrid";

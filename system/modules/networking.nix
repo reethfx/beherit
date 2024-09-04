@@ -1,4 +1,4 @@
-{  pkgs, lib, inputs, ... }:
+{  pkgs, lib, ... }:
 
 {
  networking.hostName = "beherit"; # FIXME Set your hostname.

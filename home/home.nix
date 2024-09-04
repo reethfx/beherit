@@ -1,19 +1,24 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, hyprland, ags, ... }:
 
-let
-  ags = inputs.ags.packages.${pkgs.system}.default;
-in
 {
-  home.stateVersion = "24.05";
+  programs.home-manager.enable = true;
+
+  home.stateVersion = "24.11";
+
+  home.username = "reeth";
+  home.homeDirectory = "/home/reeth";
+
   home.packages = with pkgs; [
-    ags
-    firefox
+    kitty                                   
+    neovim
+    fish
+    alacritty                                      
   ];
 
-  programs.kitty.enable = true;
-  wayland.windowManager.hyprland.enable = true;
-  
-   wayland.windowManager.hyprland.settings = {
+  programs.kitty.enable = true; # required for the default Hyprland config
+
+  wayland.windowManager.hyprland.enable = true; # enable Hyprland
+  wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
     bind =
       [
@@ -30,8 +35,10 @@ in
               "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
             ]
           )
-          6)
+          9)
       );
   };
-  
+
+  # Configuraciones adicionales
+  # Puedes agregar más configuraciones como shell, editor, etc.
 }
