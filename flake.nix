@@ -1,42 +1,36 @@
 {
-  description = "Beherit NixOS configuration";
+  description = "Beherit configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    hyprland.url = "github:hyprwm/Hyprland";
-
-    ags.url = "github:Aylur/ags";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    home-manager.url = "github:nix-community/home-manager";
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
   };
 
-  outputs = { self, nixpkgs, home-manager, hyprland, ... }: let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-    };
-  in
-    {
+  outputs = { self, nixpkgs, home-manager, hyprland, ... }:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        system = system;
+      };
+    in {
       nixosConfigurations = {
         beherit = nixpkgs.lib.nixosSystem {
-          modules = [ 
-            ./system/configuration.nix 
+          system = system;
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./system/configuration.nix
             home-manager.nixosModules.home-manager
-            {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.reeth = import ./home/home.nix;
-
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
-            }
-            ];
+          ];
         };
       };
-   };
+
+      # Configuración de Home-Manager para tu usuario
+      homeConfigurations = {
+        reeth = home-manager.lib.homeManagerConfiguration {
+          pkgs = pkgs;
+          modules = [ ./home/home.nix ];
+        };
+      };
+    };
 }

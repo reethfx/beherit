@@ -10,16 +10,30 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "es";
-    variant = "";
+  services.xserver = {
+    enable = true;
+    windowManager.hyprland = {
+      enable = true;
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+      terminal = "${pkgs.fish}/bin/fish";  # Establece Fish como terminal por defecto
+    };
+    displayManager = {
+      defaultSession = "hyprland";
+      lightdm.enable = true;
+      greeter = {
+        enable = true;
+        package = pkgs.hyprlock;  # Hyprlock como greeter por defecto
+      };
+    };
   };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
   services.tailscale.enable = true;
+
+  programs.hyprland.enable = true;
 
   # xdg.portal = {
   #   enable = true;

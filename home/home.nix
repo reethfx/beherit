@@ -1,21 +1,41 @@
-{ config, pkgs, hyprland, ags, ... }:
+{ pkgs, ... }:
 
-let
-  hyprlandConfig = import ./dotfiles/hyprland/default.nix { inherit pkgs hyprland; };
-  packages = import ./dotfiles/packages.nix { inherit pkgs; };
-in
 {
-  programs.home-manager.enable = true;
-
+  # Define la versión de Home-Manager que estás usando
   home.stateVersion = "24.11";
 
-  home.username = "reeth";
-  home.homeDirectory = "/home/reeth";
+  programs.hyprland = {
+    enable = true;
+    config = {
+      layout = "es";
+      gapsIn = 5;
+      gapsOut = 10;
+      bind = {
+        "SUPER+RETURN" = "exec ${pkgs.fish}/bin/fish";  # Fish como terminal
+        "SUPER+Q" = "killactive";  # Atajo para cerrar ventanas
+      };
+    };
+  };
 
-  home.packages = packages;
+  programs.fish = {
+    enable = true;
+    interactiveShellInit = ''
+      set -g fish_greeting "Welcome to Fish on Hyprland!";
+    '';
+  };
 
-  wayland.windowManager.hyprland.enable = true;
-  wayland.windowManager.hyprland.settings = hyprlandConfig;
+  # Configuración de Git
+  programs.git = {
+    enable = true;
+    userName = "reethfx";
+    userEmail = "reethb3rsrk@gmail.com";
+  };
 
-  programs.fish.enable = true;
+  services.redshift = {
+    enable = true;
+    latitude = "40.4168";
+    longitude = "-3.7038";
+    tempDay = 6500;
+    tempNight = 3500;
+  };
 }
