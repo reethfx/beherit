@@ -3,16 +3,16 @@
 {
   imports =
     [ 
-      ./hardware-configuration.nix
-      ./bootloader.nix
-      ./locale.nix
-      ./networking.nix
-      ./packages.nix
-      ./pipewire.nix
-      ./services.nix
-      ./user.nix
+      ./modules/hardware-configuration.nix
+      ./modules/bootloader.nix
+      ./modules/locale.nix
+      ./modules/networking.nix
+      ./modules/packages.nix
+      ./modules/pipewire.nix
+      ./modules/services.nix
+      ./modules/user.nix
     ];
  
   system.stateVersion = "24.05";
 
-}
+} 

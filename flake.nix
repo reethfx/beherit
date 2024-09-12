@@ -17,7 +17,7 @@
       nixosConfigurations = {
         beherit = nixpkgs.lib.nixosSystem {
           system = system;
-          specialArgs = { inherit inputs; };
+          # specialArgs = { inherit inputs; };
           modules = [
             ./system/configuration.nix
             home-manager.nixosModules.home-manager
