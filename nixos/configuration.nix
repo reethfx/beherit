@@ -30,15 +30,16 @@
    networking.networkmanager.enable = true;
 
    environment.systemPackages = with pkgs; [
-    hyprland
     alacritty  # Terminal of choice (or any other)
     fish       # Default shell
     git
     curl
     wget
+    
   ];
 
   programs.fish.enable = true;
+  programs.hyprland.enable = true;
 
   nixpkgs = {
     # You can add overlays here
