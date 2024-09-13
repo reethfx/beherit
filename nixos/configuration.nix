@@ -38,7 +38,6 @@
   ];
 
   programs.hyprland.enable = true;
-  programs.kitty.enable = true;
   programs.fish.enable = true;
 
   nixpkgs = {
