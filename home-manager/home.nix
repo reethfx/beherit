@@ -45,7 +45,6 @@
     # programs.fish.enable = true;
 
     home.packages = with pkgs; [
-    hyprland
     hyprpaper
     fish
     starship

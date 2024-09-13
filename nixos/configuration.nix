@@ -31,7 +31,7 @@
    environment.systemPackages = with pkgs; [
     home-manager
     fish
-    kitty
+    starship
     git
     curl
     wget
@@ -39,8 +39,17 @@
   ];
 
   programs.hyprland.enable = true;
-  programs.fish.enable = true;
 
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    extraPortals = [pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk];
+    config.common.default = "*";
+  };
+
+  programs.fish.enable = true;
+  programs.starship.enable = true;
+  
   nixpkgs = {
     # You can add overlays here
     overlays = [
@@ -95,6 +104,7 @@
       isNormalUser = true;
       # TODO: Be sure to add any other groups you need (such as audio, docker, etc)
       extraGroups = ["wheel" "networkmanager"];
+      terminal = pkgs.;
       shell = pkgs.fish;
     };
   };
