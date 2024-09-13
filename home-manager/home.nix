@@ -56,7 +56,8 @@
     hyprctl
     fish
     alacritty
-  ];´
+    vscode
+  ];
 
     home.file.".config/hypr/hyprland.conf".text = ''
     bind = SUPR, Q, exec env TERMINAL=alacritty fish
