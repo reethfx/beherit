@@ -24,22 +24,22 @@
     ./hardware-configuration.nix
   ];
 
-  # Enable X11 or Wayland (Hyprland uses Wayland)
    services.xserver.enable = true;
 
    networking.networkmanager.enable = true;
 
    environment.systemPackages = with pkgs; [
-    alacritty  # Terminal of choice (or any other)
     fish       # Default shell
+    kitty
     git
     curl
     wget
     
   ];
 
-  programs.fish.enable = true;
   programs.hyprland.enable = true;
+  programs.kitty.enable = true;
+  programs.fish.enable = true;
 
   nixpkgs = {
     # You can add overlays here
