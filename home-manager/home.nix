@@ -1,13 +1,7 @@
 # This is your home-manager configuration file
 # Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
+{  inputs, outputs, lib, config, pkgs, ... }:ç
 {
-  inputs,
-  outputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
   # You can import other home-manager modules here
   imports = [
     # If you want to use modules your own flake exports (from modules/home-manager):
@@ -19,6 +13,8 @@
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
   ];
+
+  
 
   nixpkgs = {
     # You can add overlays here
@@ -44,6 +40,25 @@
       allowUnfree = true;
     };
   };
+
+    # Home-Manager specific configurations for Hyprland
+  programs.hyprland = {
+    enable = true;
+    configFile = "${config.home.homeDirectory}/.config/hypr/hyprland.conf";
+  };
+
+    # Enable fish as the default shell
+  programs.fish.enable = true;
+
+    home.packages = with pkgs; [
+    hyprland
+    hyprpaper
+    hyprctl
+    fish
+    alacritty
+  ];
+
+  services.hyprlock.enable = true;
 
   # TODO: Set your username
   home = {
