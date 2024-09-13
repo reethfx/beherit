@@ -56,7 +56,11 @@
     hyprctl
     fish
     alacritty
-  ];
+  ];´
+
+    home.file.".config/hypr/hyprland.conf".text = ''
+    bind = SUPR, Q, exec env TERMINAL=alacritty fish
+  '';
 
 
   # TODO: Set your username

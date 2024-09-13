@@ -17,10 +17,9 @@ Thank you for visiting and exploring my world of aesthetics and beauty based on 
 - [About](#-about)
 - [Showcase](#-showcase)
 - [Components](#-components)
-- [Features](#-features)
 - [Installation](#-installation)
 - [Keybindings](#️-keybindings)
-- [Useful aliases in Fish Shell](#-useful-aliases-in-fish-shell)
+- [Inspiration](#-inspiration)
 
 ## 📖 About
 
@@ -32,6 +31,9 @@ This system leverages cutting-edge channels and versions of software to provide 
 This approach ensures that you stay on the forefront of technology, receiving the most recent software advancements promptly. 🚨 However, it's important to note that this emphasis on bleeding-edge software may impact the stability of the system.
 
 You have the flexibility to customize these configurations according to your needs by modifying the respective configuration files. 
+
+## 💻 Showcase
+this is not ready yet since the project is on development
 
 ## 🔧 Components
 
@@ -76,12 +78,7 @@ You have the flexibility to customize these configurations according to your nee
 | WIN + SHIFT + Q        | Exit                         |
 | WIN + X                | Toggle floating mode         |
 
-
-
-
-
 You can find all other keybindings in `/home/.config/hypr/hyprland.conf` in the bind section. All system fish scripts are located at `/home/.config/fish/functions` directory.
 
-## 💻 Gallery
 
 ## 🧵 Inspiration
