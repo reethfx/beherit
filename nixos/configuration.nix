@@ -29,6 +29,7 @@
    networking.networkmanager.enable = true;
 
    environment.systemPackages = with pkgs; [
+    home-manager
     fish
     kitty
     git
