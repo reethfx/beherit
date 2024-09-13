@@ -55,14 +55,14 @@
     hyprpaper
     hyprctl
     fish
-    alacritty
-    vscode
+    
   ];
 
-    home.file.".config/hypr/hyprland.conf".text = ''
-    bind = SUPR, Q, exec env TERMINAL=alacritty fish
-  '';
-
+  programs.fish.enable = true;
+  programs.starship = {
+    enable = true;
+    promptInit = true;
+  };
 
   # TODO: Set your username
   home = {
