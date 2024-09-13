@@ -48,7 +48,7 @@
   };
 
     # Enable fish as the default shell
-  programs.fish.enable = true;
+    programs.fish.enable = true;
 
     home.packages = with pkgs; [
     hyprland

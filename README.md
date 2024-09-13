@@ -51,7 +51,11 @@ You have the flexibility to customize these configurations according to your nee
 
 1. Download and Install NixOS from the [official site](https://nixos.org/download).
 
-2. Once installed, coppy your `hardware-configuration.nix` in `./system/` 
+2. Exectue `nix-shell -p git` follwed by `git clone https:gtihub.com/reethfx/beherit ~/.config/beherit`.
+
+2. Once installed, coppy your `hardware-configuration.nix` in the `./nixos/` directory inside the dotfiles.
+
+3. Add this line `boot.loader.systemd-boot.enable = true;` on `hardware-configuration.nix`, you have the line example on the same example file on my configuration.
 
 3. Temporarily install ripgrep and fish using the command: `nix-shell -p ripgrep fish --run fish`. You can also use classic bash and grep for the next step without installing fish and ripgrep.
 
