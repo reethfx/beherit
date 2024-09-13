@@ -49,7 +49,7 @@
 
   programs.fish.enable = true;
   programs.starship.enable = true;
-  
+
   nixpkgs = {
     # You can add overlays here
     overlays = [
@@ -104,7 +104,7 @@
       isNormalUser = true;
       # TODO: Be sure to add any other groups you need (such as audio, docker, etc)
       extraGroups = ["wheel" "networkmanager"];
-      terminal = pkgs.;
+      terminal = pkgs.starship;
       shell = pkgs.fish;
     };
   };
