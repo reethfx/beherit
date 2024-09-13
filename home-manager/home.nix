@@ -41,26 +41,18 @@
     };
   };
 
-  # Home-Manager specific configurations for Hyprland
-  programs.hyprland = {
-    enable = true;
-    configFile = "${config.home.homeDirectory}/.config/hypr/hyprland.conf";
-  };
-
     # Enable fish as the default shell
     # programs.fish.enable = true;
 
     home.packages = with pkgs; [
     hyprland
     hyprpaper
-    hyprctl
     fish
     starship
   ];
 
  programs.starship = {
     enable = true;
-    promptInit = true;
   };
 
   # TODO: Set your username
