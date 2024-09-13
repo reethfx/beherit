@@ -25,25 +25,20 @@
   ];
 
   # Enable X11 or Wayland (Hyprland uses Wayland)
-  services.xserver.enable = true;
-  services.xserver.displayManager.defaultSession = "none+hyprland";
-  services.xserver.displayManager.greeter = {
-    session = "hyprland";
-    package = pkgs.hyprlock;
-  };
-   
-  networking.networkmanager.enable = true;
+   services.xserver.enable = true;
+
+   networking.networkmanager.enable = true;
 
    environment.systemPackages = with pkgs; [
     hyprland
-    hyprctl    # Hyprland controller tool
-    hyprpaper  # Wallpaper manager
     alacritty  # Terminal of choice (or any other)
     fish       # Default shell
+    git
+    curl
+    wget
   ];
 
   programs.fish.enable = true;
-  programs.fish.defaultShell = true;
 
   nixpkgs = {
     # You can add overlays here

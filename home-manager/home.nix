@@ -41,7 +41,7 @@
     };
   };
 
-    # Home-Manager specific configurations for Hyprland
+  # Home-Manager specific configurations for Hyprland
   programs.hyprland = {
     enable = true;
     configFile = "${config.home.homeDirectory}/.config/hypr/hyprland.conf";
@@ -58,7 +58,6 @@
     alacritty
   ];
 
-  services.hyprlock.enable = true;
 
   # TODO: Set your username
   home = {
