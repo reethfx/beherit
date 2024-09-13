@@ -48,18 +48,17 @@
   };
 
     # Enable fish as the default shell
-    programs.fish.enable = true;
+    # programs.fish.enable = true;
 
     home.packages = with pkgs; [
     hyprland
     hyprpaper
     hyprctl
     fish
-    
+    starship
   ];
 
-  programs.fish.enable = true;
-  programs.starship = {
+ programs.starship = {
     enable = true;
     promptInit = true;
   };
