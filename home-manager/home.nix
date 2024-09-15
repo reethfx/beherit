@@ -14,8 +14,6 @@
     # ./nvim.nix
   ];
 
-  
-
   nixpkgs = {
     # You can add overlays here
     overlays = [
@@ -36,7 +34,6 @@
     ];
     # Configure your nixpkgs instance
     config = {
-      # Disable if you don't want unfree packages
       allowUnfree = true;
     };
   };
@@ -48,13 +45,15 @@
     hyprpaper
     fish
     starship
+    neovim #FIXME Add your desired text editor
+
   ];
 
  programs.starship = {
     enable = true;
   };
 
-  # TODO: Set your username
+  # TODO: Set your username amd home dir.
   home = {
     username = "reeth";
     homeDirectory = "/home/reeth";

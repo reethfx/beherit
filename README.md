@@ -47,6 +47,8 @@ this is not ready yet since the project is on development
 | Notification          | Dunst                       |
 | Night Gamma           | Gammastep                   |
 | Fetch Utility         | Neofetch                    |
+| Text Editor           | Neovim                      |
+
 
 
 ## 🚀 Installation
@@ -77,6 +79,8 @@ this is not ready yet since the project is on development
 | WIN + Q                | Kill active window           |
 | WIN + SHIFT + Q        | Exit                         |
 | WIN + X                | Toggle floating mode         |
+| WIN + RETURN           | Opening a terminal instance  |
+
 
 You can find all other keybindings in `/home/.config/hypr/hyprland.conf` in the bind section. All system fish scripts are located at `/home/.config/fish/functions` directory.
 
