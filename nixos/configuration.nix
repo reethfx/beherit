@@ -29,9 +29,16 @@
    networking.networkmanager.enable = true;
 
    environment.systemPackages = with pkgs; [
+    jetbrains-mono
+      (nerdfonts.override {
+        fonts = [
+          "NerdFontsSymbolsOnly"
+        ];
+    })
+    neovim
     home-manager
+    eza
     fish
-    starship
     git
     curl
     wget
@@ -104,7 +111,6 @@
       isNormalUser = true;
       # TODO: Be sure to add any other groups you need (such as audio, docker, etc)
       extraGroups = ["wheel" "networkmanager"];
-      terminal = pkgs.starship;
       shell = pkgs.fish;
     };
   };
