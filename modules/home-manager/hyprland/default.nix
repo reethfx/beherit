@@ -1,4 +1,4 @@
-{config}: {
+{
   enable = true;
   systemd.enable = true;
   xwayland.enable = true;

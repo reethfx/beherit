@@ -4,7 +4,6 @@
 {
   # You can import other home-manager modules here
   imports = [
-    ../modules/home-manager/hyprland/default.nix
     # ./nvim.nix
   ];
 
@@ -62,8 +61,7 @@
   programs.home-manager.enable = true;
   programs.git.enable = true;
 
-  wayland.windowManager.hyprland.enable = true;
-  #wayland.windowManager.hyprland.settings = import ../modules/home-manager/hyprland/default.nix; {inherit settings;};
+  wayland.windowManager.hyprland = import ./hyprland.nix { inherit pkgs; config = config; };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
