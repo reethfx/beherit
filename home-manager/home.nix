@@ -41,6 +41,7 @@
     neovim #FIXME Add your desired text editor
     tofi
     wezterm
+    kitty
   ];
 
  programs.starship = {

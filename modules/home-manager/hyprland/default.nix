@@ -54,6 +54,6 @@
       inactive_timeout = 5;
     };
 
-    windowrulev2 = import ./window-rules.nix;
+    # windowrulev2 = import ./window-rules.nix;
   };
 }
