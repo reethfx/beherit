@@ -63,6 +63,7 @@
     curl
     wget
     mesa
+    virtualboxGuestAdditions
   ];
 
   programs.hyprland.enable = true;
@@ -149,6 +150,9 @@
       PermitRootLogin = "no";
     };
   };
+
+  virtualisation.virtualbox.guest.enable = true;
+  virtualisation.virtualbox.guest.autoMount = true;
 
   system.stateVersion = "24.05"; #FIXME set it up to the actual version of NixOS
 }
