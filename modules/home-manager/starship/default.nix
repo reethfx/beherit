@@ -1,5 +1,5 @@
 {lib, ...}: {
-  {
+  programs.starship = {
     enable = true;
     settings = {
       format = lib.concatStrings [
@@ -22,7 +22,6 @@
       git_branch = {
         format = "( [$branch(:$remote_branch)]($style))";
         style = "#8087A4";
-        
       };
 
       git_status = {
@@ -36,7 +35,7 @@
         style = "yellow";
         symbol = "";
         version_format = "$raw";
-      };´
+      };
     };
   };
 }
