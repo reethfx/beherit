@@ -13,5 +13,5 @@
 #   "ags"
 
   # Apps with window rules that will be reverted
-  "spotify"
+  #"spotify"
 ]
