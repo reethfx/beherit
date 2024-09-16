@@ -12,6 +12,12 @@
   # Start the `ags` shell
    "ags"
 
+   "wezterm"
+
+   "fish"
+
+   "starhip init fish | source"
+
   # Apps with window rules that will be reverted
   #"spotify"
 ]
