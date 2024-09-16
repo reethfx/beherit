@@ -59,7 +59,5 @@
         symbol = "";
         version_format = "$raw";
       };
-
-      }
-    };
+  };
 }
