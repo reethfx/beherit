@@ -2,7 +2,6 @@
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
 { inputs, outputs, lib, config, pkgs, ... }: 
 {
-  # You can import other NixOS modules here
   imports = [
     # If you want to use modules your own flake exports (from modules/nixos):
     # outputs.nixosModules.example
@@ -16,27 +15,13 @@
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
+    ../modules/nixos/locale.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.networkmanager.enable = true;
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "es_ES.UTF-8";
-    LC_IDENTIFICATION = "es_ES.UTF-8";
-    LC_MEASUREMENT = "es_ES.UTF-8";
-    LC_MONETARY = "es_ES.UTF-8";
-    LC_NAME = "es_ES.UTF-8";
-    LC_NUMERIC = "es_ES.UTF-8";
-    LC_PAPER = "es_ES.UTF-8";
-    LC_TELEPHONE = "es_ES.UTF-8";
-    LC_TIME = "es_ES.UTF-8";
-  };
 
   # Enable sound with pipewire.Thats temp aswell
   hardware.pulseaudio.enable = false;
@@ -66,15 +51,15 @@
     hyprlock
     xss-lock
   ];
-  
+
   programs.hyprland.enable = true;
 
-  xdg.portal = {
-    enable = true;
-    xdgOpenUsePortal = true;
-    extraPortals = [pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk];
-    config.common.default = "*";
-  };
+  # xdg.portal = {
+  #   enable = true;
+  #   xdgOpenUsePortal = true;
+  #   extraPortals = [pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk];
+  #   config.common.default = "*";
+  # };
 
   programs.fish.enable = true;
   programs.starship.enable = true;

@@ -2,8 +2,8 @@
   "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
 
   # Start the clipboard daemon
-#   "wl-paste --type text --watch cliphist store"
-#   "wl-paste --type image --watch cliphist store"
+   "wl-paste --type text --watch cliphist store"
+   "wl-paste --type image --watch cliphist store"
 
   # Start the wallpaper manager
    "swww-daemon"
@@ -11,13 +11,9 @@
 
   # Start the `ags` shell
    "ags"
+   "starhip init fish | kitty"
 
-   "wezterm"
-
-   "fish"
-
-   "starhip init fish | source"
-
-  # Apps with window rules that will be reverted
-  #"spotify"
+  # Apps opened on hyprland launch
+  "spotify"
+  "discord"
 ]

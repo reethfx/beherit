@@ -43,7 +43,6 @@
     starship
     neovim #FIXME Add your desired text editor
     tofi
-    wezterm
     kitty
     hyprpicker
     wl-clipboard
