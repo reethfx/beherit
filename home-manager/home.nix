@@ -4,13 +4,7 @@
 {
   # You can import other home-manager modules here
   imports = [
-    # If you want to use modules your own flake exports (from modules/home-manager):
-    # outputs.homeManagerModules.example
-
-    # Or modules exported from other flakes (such as nix-colors):
-    # inputs.nix-colors.homeManagerModules.default
-
-    # You can also split up your configuration and import pieces of it here:
+    ../modules/home-manager/hyprland/default.nix
     # ./nvim.nix
   ];
 
@@ -69,7 +63,7 @@
   programs.git.enable = true;
 
   wayland.windowManager.hyprland.enable = true;
-  wayland.windowManager.hyprland.settings = import ../modules/home-manager/hyprland/default.nix;
+  #wayland.windowManager.hyprland.settings = import ../modules/home-manager/hyprland/default.nix; {inherit settings;};
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
