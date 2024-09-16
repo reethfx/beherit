@@ -41,6 +41,8 @@
     tofi
     wezterm
     kitty
+    hyprpicker
+    wl-clipboard
   ];
 
  programs.starship = {
@@ -61,7 +63,6 @@
   programs.home-manager.enable = true;
   programs.git.enable = true;
 
-  wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland = import ../modules/home-manager/hyprland/default.nix { inherit pkgs config; };
 
   # Nicely reload system units when changing configs

@@ -48,7 +48,7 @@
     # App shortcuts
     "$mod, RETURN, exec, wezterm"
     "$mod, D, exec, eval $(tofi-drun)"
-    #"$mod, C, exec, hyprpicker -a"
+    "$mod, C, exec, hyprpicker -a"
   ];
 
   bindm = [
