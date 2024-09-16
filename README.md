@@ -48,6 +48,8 @@ this is not ready yet since the project is on development
 | Night Gamma           | Gammastep                   |
 | Fetch Utility         | Neofetch                    |
 | Text Editor           | Neovim                      |
+| Directory display     | Eza                         |
+
 
 
 

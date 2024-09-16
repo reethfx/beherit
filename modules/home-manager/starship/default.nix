@@ -1,5 +1,4 @@
 {lib, ...}: {
-  programs.starship = {
     enable = true;
     settings = {
       format = lib.concatStrings [
@@ -36,6 +35,31 @@
         symbol = "";
         version_format = "$raw";
       };
+
+      node = {
+        format = "( [$symbol \${version}]($style bold) [$symbol \${symbol}]($style italic))";
+        node_binary = "node";
+        style = "green";
+        symbol = "";
+        version_format = "$raw";
+      };
+
+      rust = {
+        format = "( [$symbol \${version}]($style bold) [$symbol \${symbol}]($style italic))";
+        rust_binary = "rustc";
+        style = "red";
+        symbol = "";
+        version_format = "$raw";
+      };
+
+      dotnet = {
+        format = "( [$symbol \${version}]($style bold) [$symbol \${symbol}]($style italic))";
+        dotnet_binary = "dotnet";
+        style = "blue";
+        symbol = "";
+        version_format = "$raw";
+      };
+
+      }
     };
-  };
 }
