@@ -35,7 +35,6 @@
     # programs.fish.enable = true;
 
     home.packages = with pkgs; [
-    hyprpaper
     fish
     starship
     neovim #FIXME Add your desired text editor
