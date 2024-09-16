@@ -31,10 +31,14 @@
     };
   };
 
-    # Enable fish as the default shell
-    # programs.fish.enable = true;
+  # TODO: Set your username amd home dir.
+  home = {
+    username = "reeth";
+    homeDirectory = "/home/reeth";
+  };
 
-    home.packages = with pkgs; [
+  #FIXME Define your desired packages here
+    home.packages = with pkgs; [ 
     fish
     starship
     neovim #FIXME Add your desired text editor
@@ -43,18 +47,9 @@
     kitty
     hyprpicker
     wl-clipboard
+    spotify
+    discord
   ];
-
-
-  # TODO: Set your username amd home dir.
-  home = {
-    username = "reeth";
-    homeDirectory = "/home/reeth";
-  };
-
-  # Add stuff for your user as you see fit:
-  # programs.neovim.enable = true;
-  # home.packages = with pkgs; [ steam ];
 
   # Enable home-manager and git
   programs.home-manager.enable = true;

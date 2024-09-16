@@ -66,23 +66,7 @@
     hyprlock
     xss-lock
   ];
-
-  systemd.user.services.xss-lock = {
-    serviceConfig = {
-      ExecStart = "${pkgs.xss-lock}/bin/xss-lock -- hyprlock";
-    };
-    wantedBy = [ "default.target" ];
-  };
-
-   systemd.services.hyprlock = {
-    after = [ "graphical.target" ];
-    serviceConfig = {
-      ExecStart = "${pkgs.hyprlock}/bin/hyprlock";
-      User = "reeth";  # Cambia esto a tu usuario
-    };
-    wantedBy = [ "graphical.target" ];
-  };
-
+  
   programs.hyprland.enable = true;
 
   xdg.portal = {

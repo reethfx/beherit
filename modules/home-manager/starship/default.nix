@@ -36,7 +36,7 @@
         version_format = "$raw";
       };
 
-      node = {
+      nodejs = {
         format = "( [$symbol \${version}]($style bold) [$symbol \${symbol}]($style italic))";
         node_binary = "node";
         style = "green";
