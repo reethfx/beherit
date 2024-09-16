@@ -24,6 +24,9 @@
     ./hardware-configuration.nix
   ];
 
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
    services.xserver.enable = true;
 
    networking.networkmanager.enable = true;
@@ -56,6 +59,15 @@
 
   programs.fish.enable = true;
   programs.starship.enable = true;
+
+  services.xserver.enable = true;
+  services.xserver.layout = "es";
+  services.xserver.xkb = {
+    layout = "es";
+    variant = "";
+  };
+
+  }
 
   nixpkgs = {
     # You can add overlays here
