@@ -10,7 +10,7 @@
 #   "swww img $(cumulus wallpaper get) -t none"
 
   # Start the `ags` shell
-#   "ags"
+   "ags"
 
   # Apps with window rules that will be reverted
   #"spotify"
