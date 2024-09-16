@@ -27,11 +27,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-   services.xserver.enable = true;
+  networking.networkmanager.enable = true;
 
-   networking.networkmanager.enable = true;
-
-   environment.systemPackages = with pkgs; [
+    environment.systemPackages = with pkgs; [
     jetbrains-mono
       (nerdfonts.override {
         fonts = [
@@ -62,12 +60,17 @@
 
   services.xserver.enable = true;
   services.xserver.layout = "es";
+
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+
   services.xserver.xkb = {
     layout = "es";
     variant = "";
   };
 
-  }
+  console.keyMap = "es";
+  console.font = "Lat2-Terminus16";
 
   nixpkgs = {
     # You can add overlays here
