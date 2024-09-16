@@ -61,7 +61,7 @@
   programs.home-manager.enable = true;
   programs.git.enable = true;
 
-  wayland.windowManager.hyprland = import ./hyprland.nix { inherit pkgs; config = config; };
+  wayland.windowManager.hyprland = import ../modules/home-manager/hyprland/default.nix;
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

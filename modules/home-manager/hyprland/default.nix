@@ -1,3 +1,4 @@
+{ pkgs, config, ... }:
 {
   enable = true;
   systemd.enable = true;
