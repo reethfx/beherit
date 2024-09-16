@@ -46,7 +46,8 @@
     fish
     starship
     neovim #FIXME Add your desired text editor
-
+    tofi
+    wezterm
   ];
 
  programs.starship = {
@@ -66,6 +67,8 @@
   # Enable home-manager and git
   programs.home-manager.enable = true;
   programs.git.enable = true;
+  
+  wayland.windowManager.hyprland.enable = true;
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
