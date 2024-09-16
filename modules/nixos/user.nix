@@ -1,3 +1,4 @@
+{ inputs, outputs, lib, config, pkgs, ... }: 
 {
 # FIXME: Add the rest of your current configuration
   # TODO: Set your hostname

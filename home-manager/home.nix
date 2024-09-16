@@ -48,6 +48,7 @@
     wl-clipboard
     spotify
     discord
+    firefox
   ];
 
   # Enable home-manager and git
@@ -56,6 +57,7 @@
 
   wayland.windowManager.hyprland = import ../modules/home-manager/hyprland/default.nix { inherit pkgs config; };
   programs.starship = import ../modules/home-manager/starship/default.nix { inherit pkgs config lib; };
+  programs.firefox = import ../modules/home-manager/firefox/default.nix { inherit pkgs config lib; };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
