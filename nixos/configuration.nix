@@ -63,7 +63,6 @@
     curl
     wget
     swww
-    virtualboxGuestAdditions
   ];
 
   programs.hyprland.enable = true;

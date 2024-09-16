@@ -6,7 +6,7 @@
 #   "wl-paste --type image --watch cliphist store"
 
   # Start the wallpaper manager
-#   "swww-daemon"
+   "swww-daemon"
 #   "swww img $(cumulus wallpaper get) -t none"
 
   # Start the `ags` shell
