@@ -1,4 +1,4 @@
-{
+{ pkgs, nur, ... }: {
     enable = true;
     package = pkgs.firefox-devedition-bin;
 
@@ -15,16 +15,18 @@
       containers.work = {
         id = 1;
         name = "work";
-        color = "Red";
+        color = "red";
         icon = "briefcase";
       };
 
-      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-        multi-account-containers
-        ublock-origin
-        clearurls
-        indie-wiki-buddy
-      ];
+      # extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+      #   multi-account-containers
+      #   ublock-origin
+      #   clearurls
+      #   indie-wiki-buddy
+      #   wappalyzer
+      #   foxy-proxy
+      # ];
 
       bookmarks = [
         {
