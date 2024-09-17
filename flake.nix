@@ -21,6 +21,7 @@
     self,
     nixpkgs,
     home-manager,
+    nur
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -65,7 +66,10 @@
       # FIXME replace with your username@hostname
       "reeth@beherit" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; 
-        extraSpecialArgs = {inherit inputs outputs;};
+        extraSpecialArgs = {
+          nurPkgs = import nur { inherit pkgs; };
+          inherit inputs outputs;
+        };
         modules = [
           ./home-manager/home.nix
         ];

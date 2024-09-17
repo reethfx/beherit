@@ -1,4 +1,4 @@
-{ pkgs, nur, ... }: {
+{ pkgs, nurPkgs, ... }: {
     enable = true;
     package = pkgs.firefox-devedition-bin;
 
@@ -19,14 +19,14 @@
         icon = "briefcase";
       };
 
-      # extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-      #   multi-account-containers
-      #   ublock-origin
-      #   clearurls
-      #   indie-wiki-buddy
-      #   wappalyzer
-      #   foxy-proxy
-      # ];
+      extensions = with nurPkgs.repos.rycee.firefox-addons; [
+        multi-account-containers
+        ublock-origin
+        clearurls
+        indie-wiki-buddy
+        wappalyzer
+        foxy-proxy
+      ];
 
       bookmarks = [
         {
