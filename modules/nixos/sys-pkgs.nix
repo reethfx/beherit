@@ -17,5 +17,7 @@
     swww
     hyprlock
     xss-lock
+    firefox
+    dunst
   ];
 }
