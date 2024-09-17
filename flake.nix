@@ -9,6 +9,12 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     ags.url = "github:Aylur/ags";
+
+    stylix.url = "github:danth/stylix";
+    stylix.inputs.nixpkgs.follows = "nixpkgs";
+
+    nur.url = "github:nix-community/NUR";
+    nur.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
