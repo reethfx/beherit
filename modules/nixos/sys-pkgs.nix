@@ -19,5 +19,6 @@
     xss-lock
     firefox
     dunst
+    grim
   ];
 }
