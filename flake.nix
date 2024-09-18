@@ -17,13 +17,8 @@
     nur.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    nur,
-    ...
-  } @ inputs: let
+  outputs = { self, nixpkgs, home-manager, nur, ags, ...} @ inputs: 
+  let
     inherit (self) outputs;
     systems = [
       "aarch64-linux"
@@ -42,11 +37,8 @@
 
     # Your custom packages and modifications, exported as overlays
     overlays = import ./overlays {inherit inputs;};
-    # Reusable nixos modules you might want to export
-    # These are usually stuff you would upstream into nixpkgs
+    # Reusable nixos and hm modules you might want to export
     nixosModules = import ./modules/nixos;
-    # Reusable home-manager modules you might want to export
-    # These are usually stuff you would upstream into home-manager
     homeManagerModules = import ./modules/home-manager;
 
     # NixOS configuration entrypoint
@@ -56,7 +48,6 @@
       beherit = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
-          # > Our main nixos configuration file <
           ./nixos/configuration.nix
         ];
       };
@@ -69,6 +60,8 @@
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [
           ./home-manager/home.nix
+          inputs.stylix.homeManagerModules.stylix
+          inputs.ags.homeManagerModules.default
         ];
       };
     };

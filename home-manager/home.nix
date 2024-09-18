@@ -57,18 +57,19 @@
     xdg-utils
     qimgv
     sshfs
+    btop
   ];
 
   # Programs to be enabled
   programs.home-manager.enable = true;
   programs.git.enable = true;
 
-    programs.btop = {
-    enable = true;
-    settings = {
-      color_theme = "theme";
-      vim_keys = true;
-    };
+  programs.btop = {
+  enable = true;
+  settings = {
+    color_theme = "theme";
+    vim_keys = true;
+  };
   };
 
   stylix = {

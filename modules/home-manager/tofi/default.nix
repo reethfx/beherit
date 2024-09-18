@@ -1,4 +1,4 @@
-{
+{ pkgs , ... }: {
   enable = true;
   settings = {
     width = "33%";
