@@ -23,7 +23,6 @@
       #   multi-account-containers
       #   ublock-origin
       #   clearurls
-      #   indie-wiki-buddy
       #   wappalyzer
       #   foxy-proxy
       # ];
