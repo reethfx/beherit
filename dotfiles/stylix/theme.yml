@@ -1,0 +1,18 @@
+scheme: "Catppuccin Latte"
+author: "catppuccin/catppuccin"
+base00: "eff1f5"  # Latte base
+base01: "e6e9ef"  # Overlay 0
+base02: "dce0e8"  # Overlay 1
+base03: "ccd0da"  # Overlay 2
+base04: "bcc0cc"  # Subtle foreground
+base05: "acb0be"  # Main foreground
+base06: "9ca0b0"  # Brighter foreground
+base07: "8c8fa1"  # Brighter still
+base08: "d20f39"  # Red
+base09: "e64553"  # Orange
+base0A: "fe640b"  # Yellow
+base0B: "40a02b"  # Green
+base0C: "209fb5"  # Aqua/Cyan
+base0D: "1e66f5"  # Blue
+base0E: "8839ef"  # Purple
+base0F: "ea76cb"  # Pink

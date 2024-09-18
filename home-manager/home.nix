@@ -59,9 +59,25 @@
     sshfs
   ];
 
-  # Enable home-manager and git
+  # Programs to be enabled
   programs.home-manager.enable = true;
   programs.git.enable = true;
+
+    programs.btop = {
+    enable = true;
+    settings = {
+      color_theme = "theme";
+      vim_keys = true;
+    };
+  };
+
+  stylix = {
+    base16Scheme = ../dotfiles/stylix/theme.yaml;
+    autoEnable = false;
+    targets.gtk.enable = true;
+    targets.firefox.enable = true;
+    targets.firefox.profileNames = ["reeth"];
+  };
 
   wayland.windowManager.hyprland = import ../modules/home-manager/hyprland/default.nix { inherit pkgs config; };
   programs.starship = import ../modules/home-manager/starship/default.nix { inherit pkgs config lib; };
