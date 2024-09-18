@@ -69,7 +69,7 @@
   settings = {
     color_theme = "theme";
     vim_keys = true;
-  };
+    };
   };
 
   stylix = {
