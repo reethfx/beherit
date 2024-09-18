@@ -1,4 +1,4 @@
-{ pkgs, nurPkgs, ... }: {
+{ pkgs, ... }: {
     enable = true;
     package = pkgs.firefox-devedition-bin;
 

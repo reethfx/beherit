@@ -11,7 +11,7 @@
 
   # Start the `ags` shell
    "ags"
-   "starhip init fish | kitty"
+   #"starhip init fish | kitty"
 
   # Apps opened on hyprland launch
   "spotify"

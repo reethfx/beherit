@@ -49,7 +49,6 @@
     spotify
     discord
     firefox
-    wezterm
   ];
 
   # Enable home-manager and git

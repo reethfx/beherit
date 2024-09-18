@@ -1,0 +1,106 @@
+label {
+    font-weight: bold;
+    color: #393939;
+  }
+  
+  .window {
+      background-color: transparent;
+  }
+  
+  .item--narrow, .item--wide {
+    background-color: #161616;
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  
+  .item-narrow {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  .item--wide {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .button {
+    background-color: transparent;
+  }
+  
+  .button:hover > label:not(.label-active):not(.label-danger) {
+    color: #dde1e6;
+  }
+  
+  .power-button {
+    min-width: 120px;
+    min-height: 120px;
+    background-color: #262626;
+  }
+  
+  .power-button--poweroff > label {
+    color: #ee5396;
+  }
+  
+  .power-button--poweroff:hover {
+    background-color: #ee5396;
+  }
+  
+  .power-button--reboot > label {
+    color: #42be65;
+  }
+  
+  .power-button--reboot:hover {
+    background-color: #42be65;
+  }
+  
+  .power-button--suspend > label {
+    color: #82cfff;
+  }
+  
+  .power-button--suspend:hover {
+    background-color: #82cfff;
+  }
+  
+  .power-button--poweroff:hover > label,
+  .power-button--reboot:hover > label,
+  .power-button--suspend:hover > label
+  {
+    color: #ffffff;
+  }
+  
+  .label-active {
+    color: #ffffff;
+  }
+  
+  .label-danger {
+    color: #ee5396;
+  }
+  
+  .label-big {
+    font-size: 80px;
+  }
+  
+  .notification {
+    min-width: 340px;
+    border-radius: 15px;
+    background-color: #161616;
+    padding: 10px;
+    margin-bottom: 8px;
+  }
+  
+  .notification-icon {
+    border-radius: 5px;
+    min-width: 60px;
+    min-height: 60px;
+    margin-right: 1em;
+  }
+  
+  .notification-icon image {
+    font-size: 58px;
+    margin: 5px;
+  }
+  
+  .notification-action-buttons {
+    margin-top: 5px;
+  }
