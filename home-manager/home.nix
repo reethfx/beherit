@@ -71,6 +71,8 @@
     };
   };
 
+  programs.ags.enable = true;
+
   stylix = {
     base16Scheme = ../dotfiles/stylix/theme.yaml;
     autoEnable = false;
