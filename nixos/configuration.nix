@@ -5,19 +5,20 @@
     ../modules/nixos/locale.nix
     ../modules/nixos/programs.nix
     ../modules/nixos/services.nix
-    ../modules/nixos/hyprland.nix
     ../modules/nixos/sys-pkgs.nix
     ../modules/nixos/user.nix
   ];
 
+  #Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.networkmanager.enable = true;
 
-  console.keyMap = "es";
-
   nixpkgs = {
+    config = {
+      allowUnfree = true;
+    };
     overlays = [
       outputs.overlays.additions
       outputs.overlays.modifications
@@ -33,9 +34,6 @@
       #   });
       # })
     ];
-    config = {
-      allowUnfree = true;
-    };
   };
 
   nix = let

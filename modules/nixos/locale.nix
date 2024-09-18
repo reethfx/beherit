@@ -14,6 +14,5 @@
   };
 
   console.keyMap = "es";
-
   
 }

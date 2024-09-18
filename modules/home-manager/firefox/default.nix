@@ -2,6 +2,7 @@
     enable = true;
     package = pkgs.firefox-devedition-bin;
 
+    #FIXME change your profile name for FireFox
     profiles.reeth = {
       id = 0;
       name = "reeth";

@@ -57,7 +57,6 @@
     xdg-utils
     qimgv
     sshfs
-    btop
   ];
 
   # Programs to be enabled

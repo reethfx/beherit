@@ -7,7 +7,6 @@
           "NerdFontsSymbolsOnly"
         ];
     })
-    neovim
     home-manager
     eza
     fish
@@ -20,5 +19,6 @@
     firefox
     dunst
     grim
+    btop
   ];
 }
