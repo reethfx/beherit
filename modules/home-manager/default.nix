@@ -5,4 +5,5 @@
   # my-module = import ./my-module.nix;
   starship = import ./starship/default.nix;
   hyprland = import ./hyprland/default.nix;
+  
 }

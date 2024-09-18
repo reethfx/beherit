@@ -49,6 +49,14 @@
     spotify
     discord
     firefox
+    grim
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    pavucontrol
+    xdg-utils
+    qimgv
+    sshfs
   ];
 
   # Enable home-manager and git
@@ -58,6 +66,7 @@
   wayland.windowManager.hyprland = import ../modules/home-manager/hyprland/default.nix { inherit pkgs config; };
   programs.starship = import ../modules/home-manager/starship/default.nix { inherit pkgs config lib; };
   programs.firefox = import ../modules/home-manager/firefox/default.nix { inherit pkgs config lib; };
+  programs.tofi = import ../modules/home-manager/tofi/default.nix { inherit pkgs config lib; };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
