@@ -11,7 +11,7 @@
     input =
       {
         kb_layout = "es";
-        kb_options = "caps:escape";
+        #kb_options = "caps:escape"; enable for vim mode
 
         numlock_by_default = true;
         accel_profile = "flat";
