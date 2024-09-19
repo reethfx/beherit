@@ -1,4 +1,4 @@
-{pgks, ...}: {
+{ pkgs, ... }: {
     enable = true;
         extraConfig = ''
           include ./themes/mocha.conf
