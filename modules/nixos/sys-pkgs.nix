@@ -20,5 +20,7 @@
     dunst
     grim
     btop
+    bat
+    swaylock
   ];
 }

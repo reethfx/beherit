@@ -77,6 +77,7 @@ this is not ready yet since the project is on development
 | WIN + Q                | Kill active window           |
 | WIN + SHIFT + Q        | Exit Hyprland                |
 | WIN + X                | Toggle floating mode         |
+| WIN + M                | Toggle fullscreen            |
 | WIN (TM Enabled)       | Move windows freely          |
 | WIN + RETURN           | Opening a terminal instance  |
 

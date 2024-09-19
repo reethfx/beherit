@@ -58,6 +58,8 @@
     sshfs
     keepass
     vscode
+    neofetch
+    discord
   ];
 
   # Programs to be enabled
