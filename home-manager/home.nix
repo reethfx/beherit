@@ -66,7 +66,7 @@
   programs.btop = {
   enable = true;
   settings = {
-    color_theme = "theme";
+    color_theme = ../dotfiles/btop/themes/theme.theme;
     vim_keys = true;
     };
   };

@@ -2,7 +2,6 @@ import { Workspaces } from "./workspaces.js";
 import { Clock } from "./clock.js";
 import { Title } from "./title.js";
 import { Audio } from "./audio.js";
-import { Wallpaper } from "./wallpaper.js";
 import { ItemNarrow } from "./item.js";
 import { ButtonLabel } from "./button-label.js";
 import { OpenPowerMenuButton } from "./power-menu.js";

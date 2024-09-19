@@ -8,7 +8,7 @@ export const Title = () => Widget.Box({
       label: hyprland.active.client.bind("title").as(
         title => {
           if (title === "") {
-            return "Nubosa";
+            return "Beherit";
           };
 
           if (title.length < 45) {
