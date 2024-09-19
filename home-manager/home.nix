@@ -41,15 +41,14 @@
     home.packages = with pkgs; [ 
     fish
     starship
+    kitty
     neovim #FIXME Add your desired text editor
     tofi
-    kitty
     hyprpicker
     wl-clipboard
     spotify
     discord
     firefox
-    grim
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
@@ -61,6 +60,7 @@
 
   # Programs to be enabled
   programs.home-manager.enable = true;
+
   programs.git.enable = true;
 
   programs.btop = {
@@ -71,8 +71,6 @@
     };
   };
 
-  programs.ags.enable = true;
-
   stylix = {
     base16Scheme = ../dotfiles/stylix/theme.yaml;
     autoEnable = false;
@@ -81,10 +79,13 @@
     targets.firefox.profileNames = ["reeth"];
   };
 
+  programs.ags.enable = true;
+
   wayland.windowManager.hyprland = import ../modules/home-manager/hyprland/default.nix { inherit pkgs config; };
   programs.starship = import ../modules/home-manager/starship/default.nix { inherit pkgs config lib; };
   programs.firefox = import ../modules/home-manager/firefox/default.nix { inherit pkgs config lib; };
   programs.tofi = import ../modules/home-manager/tofi/default.nix { inherit pkgs config lib; };
+  programs.kitty = import ../modules/home-manager/kitty/kitty.nix { inherit pkgs config lib; };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
