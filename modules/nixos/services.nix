@@ -4,6 +4,7 @@
 
   services.xserver.displayManager.gdm.enable = true; #Temp
   services.xserver.desktopManager.gnome.enable = true; #Temp
+  services.xserver.xkb.options = "";
 
   services.xserver.xkb = {
     layout = "es";

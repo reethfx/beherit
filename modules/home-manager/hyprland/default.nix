@@ -21,14 +21,12 @@
 
     env = import ./env.nix;
 
-    monitor = [
-      "DP-3, 1920x1080@240, 0x0, 1"
+  monitor = [
+    "eDP-1, 1920x1200@120, 0x0, 1"  # Pantalla del portátil con resolución 3K y 120Hz
 
-      # Fake monitor bug caused by Nvidia, need to be disable or it will crash when
-      # you move around workspaces
-      "Unknown-1, disable"
-    ];
-
+    # Fake monitor causado por NVIDIA, deshabilitado
+    "Unknown-1, disable"
+  ];
     exec-once = import ./exec-once.nix {inherit config;};
 
     general = {
@@ -54,6 +52,7 @@
       inactive_timeout = 5;
     };
 
-    # windowrulev2 = import ./window-rules.nix;
+     windowrulev2 = import ./window-rules.nix;
   };
+    
 }

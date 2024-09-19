@@ -62,12 +62,16 @@
   # Programs to be enabled
   programs.home-manager.enable = true;
 
-  programs.git.enable = true;
+  programs.git = {
+    enable = true;
+    userName = "reethfx";
+    userEmail = "reethb3rsrk@gmail.com";
+  };
 
   programs.btop = {
   enable = true;
   settings = {
-    #color_theme = ../dotfiles/btop/themes/theme.theme;
+    color_theme = "theme.theme";
     vim_keys = true;
     };
   };
@@ -96,6 +100,10 @@
     gtk.enable = true;
     x11.enable = true;
   };
+  
+    home.sessionVariables.FISH_PLUGIN_INSTALL = ''
+    fisher install IlanCosman/tide@v5
+  '';
 
   xdg.enable = true;
 
@@ -121,7 +129,7 @@
   programs.firefox = import ../modules/home-manager/firefox/default.nix { inherit pkgs config lib; };
   programs.tofi = import ../modules/home-manager/tofi/default.nix { inherit pkgs config lib; };
   programs.kitty = import ../modules/home-manager/kitty/kitty.nix { inherit pkgs config lib; };
-
+  programs.fish = import ../modules/home-manager/fish/fish.nix { inherit pkgs config lib; };
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 

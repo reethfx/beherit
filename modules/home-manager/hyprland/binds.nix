@@ -46,8 +46,8 @@
     # "$mod_key, V, exec, cliphist list | sed 's/^[0-9]*\\t//g' | tofi --placeholder-text='Clipboard...' | cliphist decode | wl-copy"
 
     # App shortcuts
-    "$mod, RETURN, exec, wezterm start -- bash -c 'fish -c \"starship init fish | source\"'"
-    "$mod, SHIFT, F, exec, firefox"
+    "$mod, RETURN, exec, starship init fish | kitty"
+    "$mod, F, exec, firefox"
     "$mod, D, exec, eval $(tofi-drun)"
     "$mod, C, exec, hyprpicker -a"
   ];

@@ -51,6 +51,12 @@
     registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   };
+  
+    hardware.nvidia = {
+    package = pkgs.nvidiaPackages.stable;
+    modesetting.enable = true;
+    powerManagement.enable = true;
+  };
 
   system.stateVersion = "24.05"; #FIXME set it up to the actual version of NixOS
 }
