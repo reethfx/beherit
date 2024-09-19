@@ -1,35 +1,31 @@
-{
+{pgks, ...}: {
     enable = true;
         extraConfig = ''
-      include ${catppuccin}/themes/mocha.conf
+          include ./themes/mocha.conf
 
-      # Fuente
-      font_family      FiraCode Nerd Font Mono
-      bold_font        auto
-      italic_font      auto
-      font_size        14.0
+          # Font
+          font_family      FiraCode Nerd Font Mono
+          bold_font        auto
+          italic_font      auto
+          font_size        12.0
 
-      # Apariencia del cursor y bordes
-      cursor          beam
-      cursor_blink    yes
-      cursor_shape    block
+          # Cursor
+          cursor_blink    yes
+          cursor_shape    block
 
-      # Transparencia
-      background_opacity  0.9
+          # Transparency
+          background_opacity  0.9
 
-      # Padding (relleno)
-      padding_width 5
+          # Padding
+          padding_width 10
 
-      # Habilitar vi-mode para navegación
-      enable_vi_mode yes
+          # Vi_mode for nav
+          enable_vi_mode yes
+          scrollback_lines 5000
 
-      # Bordes en las ventanas de Kitty
-      window_border_width 2
+          window_border_width 1
 
-      # Opciones de desplazamiento
-      scrollback_lines 5000
 
-      # Opciones adicionales para mejorar el rendimiento visual
-      dynamic_background_opacity yes
-    '';
+          dynamic_background_opacity yes
+        '';
 }

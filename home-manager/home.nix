@@ -56,6 +56,7 @@
     xdg-utils
     qimgv
     sshfs
+    keepass
   ];
 
   # Programs to be enabled
