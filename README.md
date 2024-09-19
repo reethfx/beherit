@@ -27,6 +27,7 @@ This system leverages cutting-edge channels and versions of software to provide 
 
 - **flake** (An experimental feature of the Nix package manager)
 - **nixpkgs**: unstable
+- **home-manager**: a tool for managing files and configs in your /home/<user> directory using Nix
 
 This approach ensures that you stay on the forefront of technology, receiving the most recent software advancements promptly. 🚨 However, it's important to note that this emphasis on bleeding-edge software may impact the stability of the system.
 
