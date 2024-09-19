@@ -74,11 +74,10 @@ this is not ready yet since the project is on development
 
 | Key Combination        | Action                       |
 |------------------------|------------------------------|
-| ALT + R                | Resize windows mode          |
-| ALT + M                | Move windows mode            |
 | WIN + Q                | Kill active window           |
-| WIN + SHIFT + Q        | Exit                         |
+| WIN + SHIFT + Q        | Exit Hyprland                |
 | WIN + X                | Toggle floating mode         |
+| WIN (TM Enabled)       | Move windows freely          |
 | WIN + RETURN           | Opening a terminal instance  |
 
 
