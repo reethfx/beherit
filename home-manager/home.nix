@@ -47,7 +47,7 @@
     hyprpicker
     wl-clipboard
     spotify
-    discord
+    vesktop
     firefox
     noto-fonts
     noto-fonts-cjk
@@ -78,6 +78,40 @@
     targets.gtk.enable = true;
     targets.firefox.enable = true;
     targets.firefox.profileNames = ["reeth"];
+  };
+
+  gtk = {
+    enable = true;
+    cursorTheme = {
+      name = "Bibata-Modern-Classic";
+      package = pkgs.bibata-cursors;
+      size = 24;
+    };
+  };
+
+  home.pointerCursor = {
+    name = "Bibata-Modern-Classic";
+    package = pkgs.bibata-cursors;
+    size = 24;
+    gtk.enable = true;
+    x11.enable = true;
+  };
+
+  xdg.enable = true;
+
+  xdg.mime.enable = true;
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "text/html" = "firefox-developer-edition.desktop";
+      "x-scheme-handler/http" = "firefox-developer-edition.desktop";
+      "x-scheme-handler/https" = "firefox-developer-edition.desktop";
+      "x-scheme-handler/about" = "firefox-developer-edition.desktop";
+      "x-scheme-handler/unknown" = "firefox-developer-edition.desktop";
+
+      "image/jpeg" = "qimgv.desktop";
+      "image/png" = "qimgv.desktop";
+    };
   };
 
   programs.ags.enable = true;
