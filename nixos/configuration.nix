@@ -50,10 +50,15 @@
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   };
   
-    hardware.nvidia = {
-    package = pkgs.nvidiaPackages.stable;
-    modesetting.enable = true;
-    powerManagement.enable = true;
+  hardware.nvidia = {
+    package = pkgs.nvidiaPackages.stable;  # Usa el driver propietario
+    modesetting.enable = true;  # Habilitar modesetting para NVIDIA
+  };
+
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
   };
 
   system.stateVersion = "24.05"; #FIXME set it up to the actual version of NixOS

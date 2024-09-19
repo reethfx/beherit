@@ -1,4 +1,4 @@
-{
+{ pkgs, ...}:{
 hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -13,18 +13,12 @@ hardware.pulseaudio.enable = false;
 
   programs.hyprland = {
     enable = true;
-
-    config = {
-      input = {
-        kb_layout = "es";
-      };
-    };
   };
 
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
-    # extraPortals = [pkgs.xdg-desktop-portal-hyprland pkgs.xdg-desktop-portal-gtk];
+    extraPortals = [pkgs.xdg-desktop-portal-hyprland];
     config.common.default = "*";
   };
 

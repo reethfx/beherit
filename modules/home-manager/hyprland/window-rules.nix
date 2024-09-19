@@ -8,5 +8,5 @@
   #Temporally force some apps to go to workspace in particular,
   # it will by reverted by the script `revert-startup-apps-window-rules`
    "workspace 4 silent, class:vesktop"
-   "workspace 5 silent, class:Spotify"
+   "workspace 5 silent, class:spotify"
 ]

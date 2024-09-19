@@ -10,7 +10,7 @@
     prompt-text = "\"\"";
 
     input-color = "ffffff";
-    background-color = "161616";
+    background-color = "1e1e2e";
 
     border-width = 4;
     border-color= "be95ff";
