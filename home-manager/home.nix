@@ -57,6 +57,7 @@
     qimgv
     sshfs
     keepass
+    vscode
   ];
 
   # Programs to be enabled

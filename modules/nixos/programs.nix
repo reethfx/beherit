@@ -11,7 +11,15 @@ hardware.pulseaudio.enable = false;
   programs.fish.enable = true;
   programs.starship.enable = true;
 
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+
+    config = {
+      input = {
+        kb_layout = "es";
+      };
+    };
+  };
 
   xdg.portal = {
     enable = true;

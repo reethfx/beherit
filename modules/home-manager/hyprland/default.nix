@@ -22,7 +22,7 @@
     env = import ./env.nix;
 
   monitor = [
-    "eDP-1, 1920x1200@120, 0x0, 1"  # Pantalla del portátil con resolución 3K y 120Hz
+    "eDP-1, 1920x1200@120, 0x0, 1" #FIXME adjust your screen size
 
     # Fake monitor causado por NVIDIA, deshabilitado
     "Unknown-1, disable"

@@ -13,6 +13,7 @@
     LC_TIME = "es_ES.UTF-8";
   };
 
+  time.timeZone = "Europe/Madrid"; #FIXME adjust your locales.
   console.keyMap = "es";
   
 }
