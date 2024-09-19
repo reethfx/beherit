@@ -12,5 +12,7 @@
   # Start the `ags` shell
    "ags"
 
+   "swaybg -i ~./config/wallpaper/bg.png -m fill"
+
   # Apps opened on hyprland launch
 ]

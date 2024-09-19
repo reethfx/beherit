@@ -59,8 +59,9 @@
     keepass
     vscode
     neofetch
-    discord
-  ];
+    nitch
+    swaybg
+ ];
 
   # Programs to be enabled
   programs.home-manager.enable = true;
