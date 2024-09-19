@@ -25,7 +25,6 @@
 
           window_border_width 1
 
-
           dynamic_background_opacity yes
         '';
 }
