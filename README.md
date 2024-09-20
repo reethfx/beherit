@@ -47,7 +47,7 @@ this is not ready yet since the project is on development
 | Bar                   | AGS                         |
 | Notification          | Dunst                       |
 | Night Gamma           | Gammastep                   |
-| Fetch Utility         | Neofetch                    |
+| Fetch Utility         | Nitch                       |
 | Text Editor           | Neovim                      |
 | Directory Display     | Eza                         |
 
@@ -80,6 +80,10 @@ this is not ready yet since the project is on development
 | WIN + M                | Toggle fullscreen            |
 | WIN (TM Enabled)       | Move windows freely          |
 | WIN + RETURN           | Opening a terminal instance  |
+| CTRL + SHIFT + T       | Opening a terminal tab       |
+| CTRL + SHIFT + ALT + T | Change curernt term tab name |
+
+
 
 
 You can find all other keybindings in `/home/.config/hypr/hyprland.conf` in the bind section. All system fish scripts are located at `/home/.config/fish/functions` directory.

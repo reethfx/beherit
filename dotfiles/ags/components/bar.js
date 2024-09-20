@@ -10,7 +10,6 @@ const Left = () => Widget.Box({
   spacing: 8,
   children: [
     OpenPowerMenuButton(),
-    Title(),
   ],
 });
 

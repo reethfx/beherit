@@ -45,7 +45,7 @@ App.addWindow(powerMenu);
 
 export const OpenPowerMenuButton = () => ItemNarrow([
   ButtonLabel(
-    "󰅟",
+    "𒉭",
     {
       onClicked: () => {
         powerMenu.visible = !powerMenu.visible;

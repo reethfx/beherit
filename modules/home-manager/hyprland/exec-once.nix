@@ -12,7 +12,8 @@
   # Start the `ags` shell
    "ags"
 
-   "swaybg -i ~./config/wallpaper/bg.png -m fill"
+   "swaybg -i ~/.config/wallpaper/bersrkarch.png -m fill"
 
   # Apps opened on hyprland launch
+  "vesktop"
 ]
