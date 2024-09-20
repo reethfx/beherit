@@ -40,6 +40,7 @@
   #FIXME Define your desired packages here
     home.packages = with pkgs; [ 
     fish
+    fishPlugins.tide
     starship
     kitty
     neovim #FIXME Add your desired text editor
@@ -61,6 +62,11 @@
     neofetch
     nitch
     swaybg
+
+    # Programming langs
+    rustup
+    dotnet-sdk
+    nodejs
  ];
 
   # Programs to be enabled
@@ -104,10 +110,6 @@
     gtk.enable = true;
     x11.enable = true;
   };
-  
-    home.sessionVariables.FISH_PLUGIN_INSTALL = ''
-    fisher install IlanCosman/tide@v5
-  '';
 
   xdg.enable = true;
 

@@ -4,7 +4,7 @@
           include ./themes/mocha.conf
 
           # Font
-          font_family      FiraCode Nerd Font Mono
+          font_family      Fira Code Nerd Font Mono
           bold_font        auto
           italic_font      auto
           font_size        12.0

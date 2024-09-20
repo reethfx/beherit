@@ -66,7 +66,9 @@ this is not ready yet since the project is on development
 
 5. Run the command `rg --hidden FIXME` and change/add lines to match your device, swaps, partitions, peripherals, file systems, etc. in the configuration files. 
 
-6. Also enable flake on your current configuration. You can simply do it by editing `/etc/nixos/configuration.nix` and adding the following line: `nix.settings.experimental-features = ["nix-command" "flakes"];`.
+6. Enable flakes on your current configuration. You can simply do it by editing `/etc/nixos/configuration.nix` and adding the following line: `nix.settings.experimental-features = ["nix-command" "flakes"];`.
+
+7. Change your hostname to your desired on `/etc/nixos/configuration.nix` and rebuild.
 
 
 
