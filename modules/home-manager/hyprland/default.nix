@@ -11,7 +11,7 @@
     input =
       {
         kb_layout = "es";
-        #kb_options = "caps:escape"; enable for vim mode
+        #kb_options = "caps:escape"; #FIXME enable for VIM mode on Hyprland.
 
         numlock_by_default = true;
         accel_profile = "flat";
@@ -23,7 +23,6 @@
 
   monitor = [
     "eDP-1, 1920x1200@120, 0x0, 1" #FIXME adjust your screen size
-
     # Fake monitor causado por NVIDIA, deshabilitado
     "Unknown-1, disable"
   ];

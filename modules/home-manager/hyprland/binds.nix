@@ -34,7 +34,7 @@
     "$mod SHIFT, M, fullscreen, 1"
 
     # Screenshots
-    "$mod, S, exec, $scripts_path/screenshot-to-clipboard"
+    "$mod, S, exec, grim"
     # "$mod SHIFT, S, exec, $scripts_path/select-area-screenshot-to-clipboard"
     # "$mod CONTROL, S, exec, $scripts_path/screenshot"
     # "$mod CONTROL SHIFT, S, exec, $scripts_path/select-area-screenshot"

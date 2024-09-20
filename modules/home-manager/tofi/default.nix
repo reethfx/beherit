@@ -13,7 +13,7 @@
     background-color = "1e1e2e";
 
     border-width = 4;
-    border-color= "be95ff";
+    border-color= "dd7878";
 
     padding-top = "2%";
     padding-bottom = "2%";
@@ -21,7 +21,7 @@
     padding-left = "1%";
 
     font = "JetBrains Mono";
-    font-size = 20;
+    font-size = 16;
 
     placeholder-text = "Search...";
     placeholder-color = "393939";
@@ -30,6 +30,6 @@
     result-spacing = 25;
 
     selection-color = "ffffff";
-    selection-match-color = "82cfff";
+    selection-match-color = "ff8282";
   };
 }
