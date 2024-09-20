@@ -41,6 +41,7 @@
     home.packages = with pkgs; [ 
     fish
     fishPlugins.tide
+    fishPlugins.grc
     starship
     kitty
     neovim #FIXME Add your desired text editor

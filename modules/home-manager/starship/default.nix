@@ -16,7 +16,7 @@
         style = "#89b4fa";
         home_symbol = "~";
         read_only = "";
-        truncation_symbol = "/";
+        truncation_symbol = "~/";
       };
 
       git_branch = {
