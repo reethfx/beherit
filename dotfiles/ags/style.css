@@ -9,7 +9,7 @@ label {
   
   .item--narrow, .item--wide {
     background-color: #161616;
-    border-radius: 10px;
+    border-radius: 25px;
     padding-top: 2px;
     padding-bottom: 2px;
   }
@@ -29,7 +29,7 @@ label {
   }
   
   .button:hover > label:not(.label-active):not(.label-danger) {
-    color: #dde1e6;
+    color: #dd7878;
   }
   
   .power-button {
@@ -70,11 +70,11 @@ label {
   }
   
   .label-active {
-    color: #ffffff;
+    color: #dd7878;
   }
   
   .label-danger {
-    color: #ee5396;
+    color: #ffffff;
   }
   
   .label-big {

@@ -10,9 +10,8 @@
 #   "swww img $(cumulus wallpaper get) -t none"
 
   # Start the `ags` shell
-   "ags"
-
-   "swaybg -i ~/.config/wallpaper/bersrkarch.png -m fill"
+  "ags"
+  "swaybg -i ~/.config/wallpaper/bersrkarch.png -m fill"
 
   # Apps opened on hyprland launch
   "vesktop"
