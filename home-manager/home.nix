@@ -137,6 +137,9 @@
   programs.tofi = import ../modules/home-manager/tofi/default.nix { inherit pkgs config lib; };
   programs.kitty = import ../modules/home-manager/kitty/kitty.nix { inherit pkgs config lib; };
   programs.fish = import ../modules/home-manager/fish/fish.nix { inherit pkgs config lib; };
+  programs.bat = import ../modules/home-manager/batcat/bat.nix { inherit pkgs config lib; };
+
+
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 

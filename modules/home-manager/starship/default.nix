@@ -2,7 +2,7 @@
     enable = true;
     settings = {
       format = lib.concatStrings [
-        "$directory$git_branch$git_status$python$nodejs$rust$dotnet\n"
+        "$directory$git_branch$git_status$python\n"
         "$character"
       ];
 

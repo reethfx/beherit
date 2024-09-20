@@ -5,8 +5,10 @@
 
   shellAliases = {
     ls = "eza --icons";
-    ll = "eza -l --icons --tree -L1";
-    la = "eza -la --icons -L1";
+    ll = "eza -l --icons --tree -l1";
+    la = "eza -la --icons --tree -l1";
+    cat = "bat";
+    mkt = "mkdir {nmap,content,exploits,scripts}";
   };
 
   plugins = [
