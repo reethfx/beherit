@@ -8,6 +8,8 @@
     ../modules/nixos/sys-pkgs.nix
     ../modules/nixos/user.nix
   ];
+  boot.kernelPackages = pkgs.linuxPackages_6_1;
+  hardware.cpu.amd.updateMicrocode = true; 
 
   #Bootloader
   boot.loader.systemd-boot.enable = true;
@@ -48,16 +50,6 @@
 
     registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
-  };
-  
-  hardware.nvidia = {
-    package = pkgs.nvidiaPackages.stable;
-    modesetting.enable = true;
-  };
-
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
   };
 
   system.stateVersion = "24.05"; #FIXME set it up to the actual version of NixOS

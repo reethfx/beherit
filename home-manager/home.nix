@@ -49,6 +49,7 @@
     hyprpicker
     wl-clipboard
     spotify
+    spicetify-cli 
     vesktop
     firefox
     noto-fonts
