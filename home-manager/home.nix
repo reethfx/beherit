@@ -5,6 +5,7 @@
   # You can import other home-manager modules here
   imports = [
     # ./nvim.nix
+    ../modules/home-manager/spicetify/spicetify.nix
   ];
 
   nixpkgs = {
@@ -48,8 +49,6 @@
     tofi
     hyprpicker
     wl-clipboard
-    spotify
-    spicetify-cli 
     vesktop
     firefox
     noto-fonts
@@ -64,6 +63,7 @@
     neofetch
     nitch
     swaybg
+    
 
     # Programming langs
     rustup

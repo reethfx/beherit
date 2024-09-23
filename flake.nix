@@ -15,9 +15,15 @@
 
     nur.url = "github:nix-community/NUR";
     nur.inputs.nixpkgs.follows = "nixpkgs";
+
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
   };
 
-  outputs = { self, nixpkgs, home-manager, nur, ags, ...} @ inputs: 
+  outputs = { self, nixpkgs, home-manager, spicetify-nix, ags, ...} @ inputs: 
   let
     inherit (self) outputs;
     systems = [
@@ -62,6 +68,7 @@
           ./home-manager/home.nix
           inputs.stylix.homeManagerModules.stylix
           inputs.ags.homeManagerModules.default
+          inputs.spicetify-nix.homeManagerModules.default
         ];
       };
     };
