@@ -118,11 +118,11 @@
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
-      "text/html" = "firefox-developer-edition.desktop";
-      "x-scheme-handler/http" = "firefox-developer-edition.desktop";
-      "x-scheme-handler/https" = "firefox-developer-edition.desktop";
-      "x-scheme-handler/about" = "firefox-developer-edition.desktop";
-      "x-scheme-handler/unknown" = "firefox-developer-edition.desktop";
+      "text/html" = "firefox.desktop";
+      "x-scheme-handler/http" = "firefox.desktop";
+      "x-scheme-handler/https" = "firefox.desktop";
+      "x-scheme-handler/about" = "firefox.desktop";
+      "x-scheme-handler/unknown" = "firefox.desktop";
 
       "image/jpeg" = "qimgv.desktop";
       "image/png" = "qimgv.desktop";
