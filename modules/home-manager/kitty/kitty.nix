@@ -11,7 +11,7 @@
 
           # Cursor
           cursor_blink    yes
-          cursor_shape    block
+          cursor_shape    beam
 
           # Transparency
           background_opacity  0.9

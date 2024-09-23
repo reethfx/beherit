@@ -6,9 +6,9 @@
         "$character"
       ];
 
-      character = {
-        success_symbol = "[▶](bold #a6e3a1)";
-        error_symbol = "[▶](bold #f38ba8)";
+     character = {
+        success_symbol = "[]( #a6e3a1)";
+        error_symbol = "[]( #f38ba8)";
       };
 
       directory = {
@@ -31,7 +31,7 @@
       };
 
       python = {
-        format = "( [$symbol \${version}]($style bold) [$virtualenv]($style italic))";
+        format = "( [$symbol \${version}]($style ) [$virtualenv]($style italic))";
         python_binary = "python";
         style = "yellow";
         symbol = "";
@@ -39,7 +39,7 @@
       };
 
       nodejs = {
-        format = "( [$symbol \${version}]($style bold) [$symbol \${symbol}]($style italic))";
+        format = "( [$symbol \${version}]($style ) [$symbol \${symbol}]($style italic))";
         node_binary = "node";
         style = "green";
         symbol = "󰎙";
@@ -47,7 +47,7 @@
       };
 
       rust = {
-        format = "( [$symbol \${version}]($style bold) [$symbol \${symbol}]($style italic))";
+        format = "( [$symbol \${version}]($style ) [$symbol \${symbol}]($style italic))";
         rust_binary = "rustc";
         style = "red";
         symbol = "";
@@ -55,7 +55,7 @@
       };
 
       dotnet = {
-        format = "( [$symbol \${version}]($style bold) [$symbol \${symbol}]($style italic))";
+        format = "( [$symbol \${version}]($style ) [$symbol \${symbol}]($style italic))";
         dotnet_binary = "dotnet";
         style = "blue";
         symbol = "󰪮";
