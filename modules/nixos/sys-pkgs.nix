@@ -18,9 +18,11 @@
     xss-lock
     firefox
     dunst
-    grim
     btop
     bat
     swaylock
+    grim
+    slurp
+    wl-clipboard
   ];
 }

@@ -6,12 +6,11 @@
    "wl-paste --type image --watch cliphist store"
 
   # Start the wallpaper manager
-   "swww-daemon"
-#   "swww img $(cumulus wallpaper get) -t none"
+  "swww-daemon"
+  "swaybg -i ~/.config/wallpaper/bersrkarch.png -m fill"
 
   # Start the `ags` shell
   "ags"
-  "swaybg -i ~/.config/wallpaper/bersrkarch.png -m fill"
 
   # Apps opened on hyprland launch
   "vesktop"

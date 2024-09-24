@@ -46,7 +46,6 @@
     neovim #FIXME Add your desired text editor
     tofi
     hyprpicker
-    wl-clipboard
     vesktop
     firefox
     noto-fonts

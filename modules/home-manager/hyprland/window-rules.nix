@@ -9,5 +9,5 @@
   # it will by reverted by the script `revert-startup-apps-window-rules
    "workspace 3 silent, class:code"
    "workspace 4 silent, class:vesktop"
-   "workspace 5 silent, class:spotify"
+   "workspace 5 silent, class:spotify-wrapped"
 ]
