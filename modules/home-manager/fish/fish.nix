@@ -3,6 +3,8 @@
 {
   enable = true;
 
+  interactiveShellInit = "";
+
   shellAliases = {
     ls = "eza --icons";
     ll = "eza -l --icons --tree -l1";

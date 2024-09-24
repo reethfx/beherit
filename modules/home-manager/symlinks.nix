@@ -21,5 +21,4 @@
   home.file.".local/bin/select-area-screenshot".source = ../../scripts/select-area-screenshot.sh;
   home.file.".local/bin/system-notification".source = ../../scripts/system-notification.sh;
 
-
 }
