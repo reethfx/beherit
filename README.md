@@ -79,8 +79,9 @@ this is not ready yet since the project is on development
 | WIN + Q                | Kill active window           |
 | WIN + SHIFT + Q        | Exit Hyprland                |
 | WIN + X                | Toggle floating mode         |
+| WIN + LMB              | Move window on floating mode |
+| WIN + RMB              | Resize window                |
 | WIN + M                | Toggle fullscreen            |
-| WIN (TM Enabled)       | Move windows freely          |
 | WIN + RETURN           | Opening a terminal instance  |
 | CTRL + SHIFT + T       | Opening a terminal tab       |
 | CTRL + SHIFT + ALT + T | Change curernt term tab name |
