@@ -33,7 +33,7 @@
   }
 
   {
-    name = "Backloggd";
-    url = "https://backloggd.com";
+    name = "ExcaliDraw";
+    url = "https://excalidraw.com/";
   }
 ]
