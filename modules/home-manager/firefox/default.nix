@@ -24,12 +24,12 @@
         icon = "briefcase";
       };
 
-      extensions = with nurPkgs.repos.rycee.firefox-addons; [
-        multi-account-containers
-        ublock-origin
-        clearurls
-        wappalyzer
-      ];
+      # extensions = with nurPkgs.repos.rycee.firefox-addons; [
+      #   multi-account-containers
+      #   ublock-origin
+      #   clearurls
+      #   wappalyzer
+      # ];
 
       bookmarks = [
         {

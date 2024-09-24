@@ -3,6 +3,7 @@
   imports = [
     # ./nvim.nix
     ../modules/home-manager/spicetify/spicetify.nix
+    ../modules/home-manager/symlinks.nix
   ];
 
   nixpkgs = {
