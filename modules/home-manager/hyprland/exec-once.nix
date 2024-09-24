@@ -15,4 +15,5 @@
 
   # Apps opened on hyprland launch
   "vesktop"
+  "spotify"
 ]

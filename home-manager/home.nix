@@ -1,7 +1,4 @@
-# This is your home-manager configuration file
-# Use this to configure your home environment (it replaces ~/.config/nixpkgs/home.nix)
-{  inputs, outputs, lib, config, pkgs, ... }:
-{
+{  inputs, outputs, lib, config, pkgs, nur, ... }: {
   # You can import other home-manager modules here
   imports = [
     # ./nvim.nix
@@ -63,7 +60,6 @@
     neofetch
     nitch
     swaybg
-    
 
     # Programming langs
     rustup
@@ -134,7 +130,7 @@
 
   wayland.windowManager.hyprland = import ../modules/home-manager/hyprland/default.nix { inherit pkgs config; };
   programs.starship = import ../modules/home-manager/starship/default.nix { inherit pkgs config lib; };
-  programs.firefox = import ../modules/home-manager/firefox/default.nix { inherit pkgs config lib; };
+  programs.firefox = import ../modules/home-manager/firefox/default.nix { inherit pkgs config lib inputs; };
   programs.tofi = import ../modules/home-manager/tofi/default.nix { inherit pkgs config lib; };
   programs.kitty = import ../modules/home-manager/kitty/kitty.nix { inherit pkgs config lib; };
   programs.fish = import ../modules/home-manager/fish/fish.nix { inherit pkgs config lib; };

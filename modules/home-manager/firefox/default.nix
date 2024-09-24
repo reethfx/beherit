@@ -1,4 +1,8 @@
-{ pkgs ,... }: {
+{ pkgs, lib, config, inputs, ... }: 
+
+  let
+    nurPkgs = import inputs.nur { inherit pkgs; };
+  in {
     enable = true;
     package = pkgs.firefox-devedition-bin;
 
@@ -20,13 +24,12 @@
         icon = "briefcase";
       };
 
-      # extensions = with nurPkgs.repos.rycee.firefox-addons; [
-      #   multi-account-containers
-      #   ublock-origin
-      #   clearurls
-      #   wappalyzer
-      #   foxy-proxy
-      # ];
+      extensions = with nurPkgs.repos.rycee.firefox-addons; [
+        multi-account-containers
+        ublock-origin
+        clearurls
+        wappalyzer
+      ];
 
       bookmarks = [
         {

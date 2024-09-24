@@ -5,10 +5,10 @@
     "$mod SHIFT, Q, exit"
 
     # Move focus
-    "$mod, H, movefocus, l"
-    "$mod, L, movefocus, r"
-    "$mod, K, movefocus, u"
-    "$mod, J, movefocus, d"
+    "CTRL, LEFT, movefocus, l"
+    "CTRL, RIGHT, movefocus, r"
+    "CTRL, UP, movefocus, u"
+    "CTRL, DOWN, movefocus, d"
 
     # Switch to workspace
     "$mod, 1, workspace, 1"
@@ -25,6 +25,12 @@
     "$mod SHIFT, 4, movetoworkspace, 4"
     "$mod SHIFT, 5, movetoworkspace, 5"
     "$mod SHIFT, 6, movetoworkspace, 6"
+
+    "$mod, LEFT, exec, hyprctl dispatch focuswindow left"
+    "$mod, RIGHT, exec, hyprctl dispatch focuswindow right"
+    "$mod, UP, exec, hyprctl dispatch focuswindow up"
+    "$mod, DOWN, exec, hyprctl dispatch focuswindow down"
+
 
     # Floating windows
     "$mod, X, togglefloating"
