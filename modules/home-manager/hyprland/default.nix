@@ -6,8 +6,7 @@
 
   settings = {
     "$mod" = "SUPER";
-    #"$scripts_path" = "${config.home.homeDirectory}/.nix-profile/bin";
-
+    
     input =
       {
         kb_layout = "es";

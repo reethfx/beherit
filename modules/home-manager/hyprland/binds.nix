@@ -41,15 +41,12 @@
 
     # Screenshots
     "$mod, S, exec, grim"
-    # "$mod SHIFT, S, exec, $scripts_path/select-area-screenshot-to-clipboard"
-    # "$mod CONTROL, S, exec, $scripts_path/screenshot"
-    # "$mod CONTROL SHIFT, S, exec, $scripts_path/select-area-screenshot"
-
-    # Change wallpaper
-    # "$mod, W, exec, cumulus wallpaper set"
+    "$mod SHIFT, S, exec, ~/.local/bin/select-area-screenshot-to-clipboard"
+    "$mod CONTROL, S, exec, ~/.local/bin/screenshot"
+    "$mod CONTROL SHIFT, S, exec, ~/.local/bin/select-area-screenshot"
 
     # Clipboard history manager
-    # "$mod_key, V, exec, cliphist list | sed 's/^[0-9]*\\t//g' | tofi --placeholder-text='Clipboard...' | cliphist decode | wl-copy"
+    "$mod, V, exec, cliphist list | sed 's/^[0-9]*\\t//g' | tofi --placeholder-text='Clipboard...' | cliphist decode | wl-copy"
 
     # App shortcuts
     "$mod, RETURN, exec, starship init fish | kitty"
