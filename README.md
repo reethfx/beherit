@@ -34,7 +34,17 @@ This approach ensures that you stay on the forefront of technology, receiving th
 You have the flexibility to customize these configurations according to your needs by modifying the respective configuration files. 
 
 ## 💻 Showcase
-this is not ready yet since the project is on development
+<table>
+  <tr>
+    <td><img src="media/screenshots/bg.png" width="200"/></td>
+    <td><img src="media/screenshots/rice.png" width="200"/></td>
+  </tr>
+  <tr>
+    <td><img src="media/screenshots/spice+firef.png" width="200"/></td>
+    <td><img src="media/screenshots/vscode.png" width="200"/></td>
+  </tr>
+</table>
+
 
 ## 🔧 Components
 
