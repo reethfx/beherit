@@ -36,12 +36,12 @@ You have the flexibility to customize these configurations according to your nee
 ## 💻 Showcase
 <table>
   <tr>
-    <td><img src="media/screenshots/bg.png" width="200"/></td>
-    <td><img src="media/screenshots/rice.png" width="200"/></td>
+    <td><img src="media/screenshots/bg.png" width="800"/></td>
+    <td><img src="media/screenshots/rice.png" width="800"/></td>
   </tr>
   <tr>
-    <td><img src="media/screenshots/spice+firef.png" width="200"/></td>
-    <td><img src="media/screenshots/vscode.png" width="200"/></td>
+    <td><img src="media/screenshots/spice+firef.png" width="800"/></td>
+    <td><img src="media/screenshots/vscode.png" width="800"/></td>
   </tr>
 </table>
 
