@@ -1,3 +1,0 @@
-return {
-  "folke/twilight.nvim",
-}

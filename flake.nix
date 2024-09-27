@@ -22,7 +22,6 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
   };
 
   outputs = { self, nixpkgs, home-manager, spicetify-nix, ags, nur, ...} @ inputs: 
@@ -40,6 +39,7 @@
     overlays = import ./overlays {inherit inputs;};
     nixosModules = import ./modules/nixos;
     homeManagerModules = import ./modules/home-manager;
+
     nixosConfigurations = {
 
       # FIXME replace with your hostname
@@ -54,8 +54,8 @@
     homeConfigurations = {
       # FIXME replace with your username@hostname
       "reeth@beherit" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; 
-        extraSpecialArgs = {inherit inputs outputs;};
+        pkgs = import nixpkgs { system = "x86_64-linux"; }; 
+        extraSpecialArgs = { inherit inputs outputs; };
         modules = [
           ./home-manager/home.nix
           inputs.stylix.homeManagerModules.stylix
