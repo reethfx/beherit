@@ -9,14 +9,9 @@ in {
   };
 
   config = mkIf cfg.enable {
-    hm = {
-      home.sessionVariables = {
-        EDITOR = "nvim";
-      };
-
       programs.neovim = {
-        enalbe = true;
-        package = pkgs.neovim-nightly;
+        enable = true;
+        package = pkgs.neovim;
         vimAlias = true;
         vimdiffAlias = true;
         withNodeJs = true;
@@ -192,10 +187,12 @@ in {
                   },
                 }
               },
-            dev = {
-              path = "${pkgs.vimUtils.packDir config.home-manager.users.reeth.programs.neovim.finalPackage.passthru.packpathDirs}/pack/myNeovimPackages/start",
-              patterns = {"folke", "nvim-telescope", "hrsh7th", "akinsho", "stevearc", "LazyVim", "catppuccin", "saadparwaiz1", "nvimdev", "rafamadriz", "lewis6991", "lukas-reineke", "nvim-lualine", "L3MON4D3", "williamboman", "echasnovski", "nvim-neo-tree", "MunifTanjim", "mfussenegger", "rcarriga", "neovim", "nvim-pack", "nvim-treesitter", "windwp", "JoosepAlviste", "nvim-tree", "nvim-lua", "RRethy", "dstein64", "Saecki", "ggandor", "iamcco", "nvim-neotest", "rouge8", "theHamsta", "SmiteshP", "jbyuki", "simrat39", "b0o", "tpope", "kosayoda" },
-            },
+
+              dev = {
+                path = "${pkgs.vimUtils.packDir config.home-manager.users.reeth.programs.neovim.finalPackage.passthru.packpathDirs}/pack/myNeovimPackages/start",
+                patterns = {"folke", "nvim-telescope", "hrsh7th", "akinsho", "stevearc", "LazyVim", "catppuccin", "saadparwaiz1", "nvimdev", "rafamadriz", "lewis6991", "lukas-reineke", "nvim-lualine", "L3MON4D3", "williamboman", "echasnovski", "nvim-neo-tree", "MunifTanjim", "mfussenegger", "rcarriga", "neovim", "nvim-pack", "nvim-treesitter", "windwp", "JoosepAlviste", "nvim-tree", "nvim-lua", "RRethy", "dstein64", "Saecki", "ggandor", "iamcco", "nvim-neotest", "rouge8", "theHamsta", "SmiteshP", "jbyuki", "simrat39", "b0o", "tpope", "kosayoda" },
+              },
+
             install = {
               missing = false,
             },
@@ -208,6 +205,5 @@ in {
         recursive = true;
         source = ./lua;
       };
-    };
   };
 }
