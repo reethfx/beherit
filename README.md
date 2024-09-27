@@ -31,6 +31,8 @@ This system leverages cutting-edge channels and versions of software to provide 
 
 This approach ensures that you stay on the forefront of technology, receiving the most recent software advancements promptly. 🚨 However, it's important to note that this emphasis on bleeding-edge software may impact the stability of the system.
 
+🚨 Another important consideration is related to the graphic drivers. In my personal case, I use this system on a device with a 16:10 aspect ratio and a combination of an AMD CPU with an Nvidia GPU, so the graphic configurations can vary significantly with each system installation. 
+
 You have the flexibility to customize these configurations according to your needs by modifying the respective configuration files. 
 
 ## 💻 Showcase
@@ -55,6 +57,7 @@ You have the flexibility to customize these configurations according to your nee
 | Terminal              | Kitty + Starship            |
 | WM (Compositor)       | Hyprland                    |
 | Bar                   | AGS                         |
+| Text Editor           | Neovim                      |
 | Notification          | Dunst                       |
 | Night Gamma           | Gammastep                   |
 | Fetch Utility         | Nitch                       |

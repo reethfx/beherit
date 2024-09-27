@@ -1,4 +1,4 @@
-{ config, lib,  pkgs, home-manager, ... }:
+{ config, lib,  pkgs, ... }:
 
 with lib; let
   cfg = config.reeth.neovim;
@@ -7,7 +7,7 @@ in {
   options.reeth.neovim = {
     enable = mkEnableOption "neovim";
   };
-
+w
   config = mkIf cfg.enable {
       programs.neovim = {
         enable = true;
@@ -25,7 +25,7 @@ in {
           headlines-nvim
 
           # theme
-          dracula-nvim
+          catppuccin-nvim
 
           # UI
           bufferline-nvim

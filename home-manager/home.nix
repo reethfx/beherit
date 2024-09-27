@@ -1,7 +1,7 @@
 {  inputs, outputs, lib, config, pkgs, nur, ... }: {
   # You can import other home-manager modules here
   imports = [
-     ../modules/home-manager/nvim/nvim.nix
+    ../modules/home-manager/nvim/nvim.nix
     ../modules/home-manager/spicetify/spicetify.nix
     ../modules/home-manager/symlinks.nix
   ];
