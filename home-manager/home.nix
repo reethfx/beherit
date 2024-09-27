@@ -59,7 +59,6 @@
     neofetch
     nitch
     swaybg
-    fortune
 
     # Programming langs
     rustup

@@ -9,8 +9,8 @@
 
   shellAliases = {
     ls = "eza --icons";
-    ll = "eza -l --icons --tree -l1";
-    la = "eza -la --icons --tree -l1";
+    ll = "eza -l --icons --tree -L2";
+    la = "eza -la --icons --tree -L2";
     cat = "bat";
     mkt = "mkdir {nmap,content,exploits,scripts}";
   };
