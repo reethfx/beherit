@@ -3,7 +3,9 @@
 {
   enable = true;
 
-  interactiveShellInit = "";
+    interactiveShellInit = ''
+      set -g fish_greeting ""
+    '';
 
   shellAliases = {
     ls = "eza --icons";
@@ -15,6 +17,6 @@
 
   plugins = [
       { name = "tide"; src = pkgs.fishPlugins.tide.src; }
-      { name = "grc"; src = pkgs.fishPlugins.grc.src; }
+      # { name = "grc"; src = pkgs.fishPlugins.grc.src; }
   ];
 }

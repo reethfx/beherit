@@ -1,4 +1,4 @@
-{ config, lib,  pkgs, ... }:
+{ config, lib,  pkgs, home-manager, ... }:
 
 with lib; let
   cfg = config.reeth.neovim;
@@ -7,7 +7,7 @@ in {
   options.reeth.neovim = {
     enable = mkEnableOption "neovim";
   };
-w
+
   config = mkIf cfg.enable {
       programs.neovim = {
         enable = true;

@@ -40,7 +40,6 @@
     home.packages = with pkgs; [ 
     fish
     fishPlugins.tide
-    fishPlugins.grc
     starship
     kitty
     neovim
@@ -60,6 +59,7 @@
     neofetch
     nitch
     swaybg
+    fortune
 
     # Programming langs
     rustup
