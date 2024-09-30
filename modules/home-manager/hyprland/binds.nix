@@ -53,7 +53,7 @@
     "$mod, F, exec, firefox"
     "$mod, D, exec, eval $(tofi-drun)"
     "$mod, C, exec, hyprpicker -a"
-    "$mod, L, exec, swaylock"
+    "$mod, L, exec, hyprlock"
 
   ];
 
