@@ -111,6 +111,7 @@ in {
 
           lazy-nvim
           vim-startuptime
+          neocord
         ];
 
         extraPackages = with pkgs; [

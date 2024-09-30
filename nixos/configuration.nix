@@ -9,7 +9,14 @@
     ../modules/nixos/user.nix
   ];
   boot.kernelPackages = pkgs.linuxPackages_6_1;
+  boot.kernelModules = [ "nvidia-drm" ];
+
   hardware.cpu.amd.updateMicrocode = true; 
+  
+  hardware.nvidia = {
+    modesetting.enable = true; 
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
 
   #Bootloader
   boot.loader.systemd-boot.enable = true;
@@ -37,6 +44,7 @@
       # })
     ];
   };
+  
 
   nix = let
     flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;

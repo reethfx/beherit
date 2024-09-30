@@ -2,18 +2,18 @@
     enable = true;
     settings = {
       format = lib.concatStrings [
-        "$directory$git_branch$git_status$python\n"
+        "$directory$git_branch$git_status$python$nodejs$rust$dotnet\n"
         "$character"
       ];
 
      character = {
-        success_symbol = "[]( #a6e3a1)";
-        error_symbol = "[]( #f38ba8)";
+        success_symbol = "[](#dd7878)";
+        error_symbol = "[](#dd7878)";
       };
 
       directory = {
         format = "[ $path]($style)( [$read_only]($read_only_style))";
-        style = "#89b4fa";
+        style = "#e64553";
         home_symbol = "~";
         read_only = "";
         truncation_symbol = "~/";
@@ -40,7 +40,6 @@
 
       nodejs = {
         format = "( [$symbol \${version}]($style ) [$symbol \${symbol}]($style italic))";
-        node_binary = "node";
         style = "green";
         symbol = "󰎙";
         version_format = "$raw";
@@ -48,7 +47,6 @@
 
       rust = {
         format = "( [$symbol \${version}]($style ) [$symbol \${symbol}]($style italic))";
-        rust_binary = "rustc";
         style = "red";
         symbol = "";
         version_format = "$raw";
@@ -56,7 +54,6 @@
 
       dotnet = {
         format = "( [$symbol \${version}]($style ) [$symbol \${symbol}]($style italic))";
-        dotnet_binary = "dotnet";
         style = "blue";
         symbol = "󰪮";
         version_format = "$raw";

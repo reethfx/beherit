@@ -17,12 +17,16 @@
     hyprlock
     xss-lock
     firefox
-    dunst
     btop
     bat
+    sway
     swaylock
     grim
     slurp
     wl-clipboard
+    vulkan-tools
+    mesa
+    libvdpau-va-gl
+    vaapiVdpau
   ];
 }
