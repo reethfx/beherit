@@ -59,6 +59,7 @@
     neofetch
     nitch
     swaybg
+    swaylock
 
     # Programming langs
     rustup
@@ -74,6 +75,18 @@
     enable = true;
     userName = "reethfx";
     userEmail = "reethb3rsrk@gmail.com";
+  };
+
+  programs.swaylock = {
+    enable = true;
+    settings = {
+      daemonize = true;
+      ignore-empty-password = true;
+      inside-color = 282828;
+      font = "hack";
+      font-size = 10;
+      image = "~/.config/wallpaper/bersrkarch.png";
+    };
   };
 
   programs.btop = {

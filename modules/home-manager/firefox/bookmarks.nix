@@ -14,6 +14,10 @@
         name = "Home Manager option search";
         url = "https://home-manager-options.extranix.com";
       }
+        {
+        name = "My NixOS";
+        url = "https://mynixos.com/";
+      }
     ];
   }
 
