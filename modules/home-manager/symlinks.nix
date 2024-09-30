@@ -9,6 +9,7 @@
 
   #Wallpaper
   home.file.".config/wallpaper/".source = ../../dotfiles/wallpaper;
+  home.file.".config/media/".source = ../../media;
 
   #Vesktop files
   home.file.".config/vesktop/settings.json".source = ../../dotfiles/vesktop/settings.json;

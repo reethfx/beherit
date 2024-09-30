@@ -27,6 +27,7 @@
           
           confirm_os_window_close 0
           dynamic_background_opacity yes
+          enable_csi_u_key_encoding yes
 
           # --[ tabs ] --------------------------------------------------------------- {{{
           

@@ -13,6 +13,8 @@
     la = "eza -la --icons --tree -L2";
     cat = "bat";
     mkt = "mkdir {nmap,content,exploits,scripts}";
+    fastfetch = "fastfetch --logo ~/.config/media/beheirt.png";
+
   };
 
   plugins = [

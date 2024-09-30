@@ -13,7 +13,7 @@
 
       directory = {
         format = "[ $path]($style)( [$read_only]($read_only_style))";
-        style = "#e64553";
+        style = "#f38ba8";
         home_symbol = "~";
         read_only = "";
         truncation_symbol = "~/";

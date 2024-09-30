@@ -6,6 +6,7 @@
     ../modules/home-manager/nvim/nvim.nix
     ../modules/home-manager/spicetify/spicetify.nix
     ../modules/home-manager/hyprlock/hyprlock.nix
+    #../modules/home-manager/fastfetch/fastfetch.nix
   ];
 
   nixpkgs = {
@@ -61,6 +62,7 @@
     swaybg
     hyprlock
     fastfetch
+    imagemagick
 
     # Programming langs
     rustup

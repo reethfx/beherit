@@ -1,7 +1,7 @@
 { pkgs , ... }: {
   enable = true;
   settings = {
-    width = "33%";
+    width = "45%";
     corner-radius = 10;
     outline-width = 0;
 
