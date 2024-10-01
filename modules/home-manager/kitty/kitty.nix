@@ -18,6 +18,8 @@
 
           # Padding
           window_padding_width 10
+          active_border_color #f38ba8
+          inactive_border_color #f38ba8
 
           # Vi_mode for nav
           enable_vi_mode yes

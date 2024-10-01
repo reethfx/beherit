@@ -8,6 +8,7 @@
     ../modules/nixos/sys-pkgs.nix
     ../modules/nixos/user.nix
   ];
+  
   boot.kernelPackages = pkgs.linuxPackages_6_1;
   boot.kernelModules = [ "nvidia-drm" ];
 
@@ -28,6 +29,7 @@
     config = {
       allowUnfree = true;
     };
+    
     overlays = [
       outputs.overlays.additions
       outputs.overlays.modifications
