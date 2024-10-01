@@ -15,6 +15,9 @@
   home.file.".config/vesktop/settings.json".source = ../../dotfiles/vesktop/settings.json;
   home.file.".config/vesktop/themes/theme.css".source = ../../dotfiles/vesktop/themes/theme.css;
 
+  #Kitty themes
+  home.file.".config/kitty/themes/mocha.conf".source = ./kitty/themes/mocha.conf;
+  
   #Fastfetch file
   home.file.".config/fastfetch/config.jsonc".source = ../../dotfiles/fastfetch/config.jsonc;
 

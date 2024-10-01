@@ -57,12 +57,12 @@ You have the flexibility to customize these configurations according to your nee
 | Terminal              | Kitty + Starship            |
 | WM (Compositor)       | Hyprland                    |
 | Bar                   | AGS                         |
-| Text Editor           | Neovim                      |
-| Notification          | Dunst                       |
-| Night Gamma           | Gammastep                   |
-| Fetch Utility         | Nitch                       |
-| Text Editor           | Neovim                      |
+| Text Editor           | Neovim                      | 
 | Directory Display     | Eza                         |
+| File terminal display | Bat                         |
+| Night Gamma           | Gammastep                   |
+| Fetch Utility         | Fastfetch                   |
+| Notification          | Notify                      |
 
 
 
