@@ -22,7 +22,9 @@
 
   monitor = [
     "eDP-1, 1920x1200@120, 0x0, 1" #FIXME adjust your screen size
-    # Fake monitor causado por NVIDIA, deshabilitado
+    "HDMI-A-1, 1920x1080@60, 0x-1440, 1.5"
+
+    # Fake monitor caused by NVIDIA
     "Unknown-1, disable"
   ];
     exec-once = import ./exec-once.nix {inherit config;};

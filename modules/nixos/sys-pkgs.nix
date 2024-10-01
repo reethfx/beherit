@@ -28,5 +28,6 @@
     mesa
     libvdpau-va-gl
     vaapiVdpau
+    autorandr
   ];
 }

@@ -62,6 +62,7 @@
     hyprlock
     fastfetch
     imagemagick
+    autorandr
 
     # Programming langs
     rustup
