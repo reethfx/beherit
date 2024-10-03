@@ -32,7 +32,7 @@
     "$mod, DOWN, exec, hyprctl dispatch focuswindow down"
 
 
-    # Floating windows
+    # Floating wqindows
     "$mod, X, togglefloating"
 
     # Toggle fullscreen
@@ -54,8 +54,6 @@
     "$mod, D, exec, eval $(tofi-drun)"
     "$mod, C, exec, hyprpicker -a"
     "$mod, L, exec, hyprlock"
-
-
   ];
 
   bindm = [

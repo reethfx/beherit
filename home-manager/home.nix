@@ -63,15 +63,33 @@
     fastfetch
     imagemagick
     autorandr
+    nil
+    hyprpicker
     dunst
-
-
+    
     # Programming langs
     rustup
     gcc
     dotnet-sdk
     nodejs
  ];
+
+   home.file.".config/dunst/dunstrc".text = ''
+      [global]
+      width = 340
+      padding = 10
+      frame_width = 0
+      margin = 8
+      background = "#161616"
+      border_radius = 15
+      icon_position = left
+      icon_size = 60
+      horizontal_padding = 10
+      separator_height = 5
+      font = Monospace 10
+    '';
+
+ 
 
   # Programs to be enabled
   programs.home-manager.enable = true;
