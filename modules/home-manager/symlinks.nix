@@ -29,5 +29,4 @@
     cp -R ${config.home.homeDirectory}/Projects/beherit/scripts/* ~/.local/bin
     chmod -R +x ~/.local/bin/*
   '';
-
 }

@@ -40,11 +40,9 @@
     "$mod SHIFT, M, fullscreen, 1"
 
     # Screenshots
-    "$mod, S, exec, grim"
+    "$mod, S, exec, ~/.local/bin/screenshot.sh"
     "$mod SHIFT, S, exec, ~/.local/bin/select-area-screenshot-to-clipboard.sh"
-    "$mod CONTROL, S, exec, ~/.local/bin/screenshot.sh"
     "$mod CONTROL SHIFT, S, exec, ~/.local/bin/select-area-screenshot.sh"
-
     "$mod, F10, exec, ~/.local/bin/toggle-touchpad.sh"
 
     # Clipboard history manager
