@@ -23,6 +23,8 @@
     };
   };
 
+  services.tailscale.enable = true;
+
     hardware.opengl = {
     enable = true;
     driSupport = true;

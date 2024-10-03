@@ -41,9 +41,11 @@
 
     # Screenshots
     "$mod, S, exec, grim"
-    "$mod SHIFT, S, exec, ~/.local/bin/select-area-screenshot-to-clipboard"
-    "$mod CONTROL, S, exec, ~/.local/bin/screenshot"
-    "$mod CONTROL SHIFT, S, exec, ~/.local/bin/select-area-screenshot"
+    "$mod SHIFT, S, exec, ~/.local/bin/select-area-screenshot-to-clipboard.sh"
+    "$mod CONTROL, S, exec, ~/.local/bin/screenshot.sh"
+    "$mod CONTROL SHIFT, S, exec, ~/.local/bin/select-area-screenshot.sh"
+
+    "$mod, F10, exec, ~/.local/bin/toggle-touchpad.sh"
 
     # Clipboard history manager
     "$mod, V, exec, cliphist list | sed 's/^[0-9]*\\t//g' | tofi --placeholder-text='Clipboard...' | cliphist decode | wl-copy"
@@ -54,6 +56,7 @@
     "$mod, D, exec, eval $(tofi-drun)"
     "$mod, C, exec, hyprpicker -a"
     "$mod, L, exec, hyprlock"
+
 
   ];
 

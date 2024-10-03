@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, config, ... }:
 
 {
   #AGS
@@ -21,11 +21,13 @@
   #Fastfetch file
   home.file.".config/fastfetch/config.jsonc".source = ../../dotfiles/fastfetch/config.jsonc;
 
-  # Scripting symlink for ~/.local/bin
-  home.file.".local/bin/screenshot-to-clipboard".source = ../../scripts/screenshot-to-clipboard.sh;
-  home.file.".local/bin/select-area-screenshot-to-clipboard".source = ../../scripts/select-area-screenshot-to-clipboard.sh;
-  home.file.".local/bin/screenshot".source = ../../scripts/screenshot.sh;
-  home.file.".local/bin/select-area-screenshot".source = ../../scripts/select-area-screenshot.sh;
-  home.file.".local/bin/system-notification".source = ../../scripts/system-notification.sh;
+  #Notification image display
+  home.file.".config/hypr/pictures/beherit.png".source = ../../media/beherit.png;
+
+  # Scripting file coppy for ~/.local/bin
+  home.activation.installScripts = lib.mkAfter ''
+    cp -R ${config.home.homeDirectory}/Projects/beherit/scripts/* ~/.local/bin
+    chmod -R +x ~/.local/bin/*
+  '';
 
 }

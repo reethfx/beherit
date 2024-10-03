@@ -6,5 +6,5 @@ if ! pgrep -x "slurp" >/dev/null; then
 
   mkdir -p "$SCREENSHOTS_PATH"
 	grim -g "$(slurp -b "#000000a5")" "$SCREENSHOT_PATH"
-	system-notification "Screenshot saved to $SCREENSHOT_PATH"
+	dunstify -i "$(find ~/.config/hypr/pictures/* | sort -R | head -1)" BEHERIT "Screenshot saved to $SCREENSHOT_PATH"
 fi

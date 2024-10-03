@@ -63,6 +63,8 @@
     fastfetch
     imagemagick
     autorandr
+    dunst
+
 
     # Programming langs
     rustup

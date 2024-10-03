@@ -29,5 +29,7 @@
     libvdpau-va-gl
     vaapiVdpau
     autorandr
+    libinput
+    samba
   ];
 }
