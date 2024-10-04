@@ -66,6 +66,8 @@
     nil
     hyprpicker
     dunst
+    obsidian
+    freerdp
     
     # Programming langs
     rustup
@@ -88,8 +90,6 @@
       separator_height = 5
       font = Monospace 10
     '';
-
- 
 
   # Programs to be enabled
   programs.home-manager.enable = true;

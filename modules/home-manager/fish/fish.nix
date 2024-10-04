@@ -14,6 +14,7 @@
     cat = "bat";
     mkt = "mkdir {nmap,content,exploits,scripts}";
     fastfetch = "fastfetch --logo ~/.config/media/beherit.png --logo-type kitty-direct --logo-width 28 --logo-height 15";
+    rdp = "xfreerdp";
   };
 
   plugins = [
