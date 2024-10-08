@@ -1,5 +1,4 @@
-{  inputs, outputs, lib, config, pkgs, nur, ... }: {
-  # You can import other home-manager modules here
+{  inputs, outputs, lib, config, pkgs, ... }: {
   imports = [
     ../modules/home-manager/symlinks.nix #Symlinks refered to certain config files
 
@@ -9,7 +8,6 @@
   ];
 
   nixpkgs = {
-    # You can add overlays here
     overlays = [
       # Add overlays your own flake exports (from overlays and pkgs dir):
       outputs.overlays.additions
@@ -44,7 +42,6 @@
     fishPlugins.tide
     starship
     kitty
-    neovim
     tofi
     hyprpicker
     vesktop
@@ -68,28 +65,17 @@
     dunst
     obsidian
     freerdp
+    gammastep
+    
+
     
     # Programming langs
     rustup
     gcc
     dotnet-sdk
     nodejs
+    python3
  ];
-
-   home.file.".config/dunst/dunstrc".text = ''
-      [global]
-      width = 340
-      padding = 10
-      frame_width = 0
-      margin = 8
-      background = "#161616"
-      border_radius = 15
-      icon_position = left
-      icon_size = 60
-      horizontal_padding = 10
-      separator_height = 5
-      font = Monospace 10
-    '';
 
   # Programs to be enabled
   programs.home-manager.enable = true;
@@ -150,6 +136,15 @@
       "image/jpeg" = "qimgv.desktop";
       "image/png" = "qimgv.desktop";
     };
+  };
+
+  xdg.desktopEntries.firefox-developer-edition = {
+    name = "Firefox Developer Edition";
+    genericName = "Web Browser";
+    exec = "firefox-developer-edition --profile ${config.home.homeDirectory}/.mozilla/firefox/reeth/ %U";
+    terminal = false;
+    categories = ["Application" "Network" "WebBrowser"];
+    mimeType = ["text/html" "text/xml"];
   };
 
   programs.ags.enable = true;

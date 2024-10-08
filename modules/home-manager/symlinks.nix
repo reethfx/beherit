@@ -24,6 +24,9 @@
   #Notification image display
   home.file.".config/hypr/pictures/beherit.png".source = ../../media/beherit.png;
 
+  #Nvim
+  # home.file.".config/nvim/lua".source = ./nvim/lua;
+
   # Scripting file coppy for ~/.local/bin
   home.activation.installScripts = lib.mkAfter ''
     cp -R ${config.home.homeDirectory}/Projects/beherit/scripts/* ~/.local/bin

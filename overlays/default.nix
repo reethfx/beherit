@@ -20,4 +20,5 @@
       config.allowUnfree = true;
     };
   };
+  
 }
