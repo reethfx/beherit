@@ -5,6 +5,7 @@
     ../modules/home-manager/nvim/nvim.nix
     ../modules/home-manager/spicetify/spicetify.nix
     ../modules/home-manager/hyprlock/hyprlock.nix
+    ../modules/home-manager/zathura/zathura.nix
   ];
 
   nixpkgs = {
@@ -66,7 +67,6 @@
     obsidian
     freerdp
     gammastep
-    
 
     
     # Programming langs
